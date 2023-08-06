@@ -1,0 +1,43 @@
+<!--pages/adduser/adduser.wxml-->
+<view class="top-box">
+  <view>Hi</view>
+  <view class="next-text">欢迎使用用户注册功能！</view>
+</view>
+<!-- 登录、注册 -->
+<view class="center-box">
+  <view class="nav">
+    <view class="right" >
+      <text>注册</text>
+    </view>
+  </view>
+  <!-- 注册 -->
+  <view class="input-box">
+    <view class="wei-input">
+      <icon type="waiting" color="#44ADFB" size="16"></icon>
+      <input class="input" auto-focus placeholder="请输入用户名"/>
+    </view>
+    <view class="wei-input">
+      <icon type="waiting" color="#44ADFB" size="16"></icon>
+      <input class="input" auto-focus placeholder="请输入手机号"/>
+    </view>
+    <view class="wei-input">
+      <icon type="success" color="#44ADFB" size="16"></icon>
+      <input class="input" auto-focus placeholder="请输入密码"/>
+    </view>
+    <view class="wei-input">
+      <icon type="success" color="#44ADFB" size="16"></icon>
+      <input class="input" auto-focus placeholder="请确认密码"/>
+    </view>
+  </view>
+  <view class="sumbit-btn">
+    <button class="button" 
+    style="background-color: #d633ff;font-size: 30rpx;" 
+    type="primary">立即注册</button>
+  </view>
+</view>
+<!-- 重影 -->
+<view class="shadow shadow-1"></view><view class="shadow shadow-2"></view>
+
+
+
+

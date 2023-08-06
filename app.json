@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/home/home",
+    "pages/myclass/myclass",
+    "pages/classlist/classlist",
+    "pages/admin/admin",
+    "pages/handsignin/handsignin",
+    "pages/addclass/addclass",
+    "pages/adduser/adduser",
+    "pages/uandc/uandc",
+    "pages/log/log"
+  ],
+  "window": {
+    "navigationBarTitleText": "卡卡狮编程",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#FFE4C4"
+  },
+  "tabBar": {
+    "selectedColor": "#FF6A6A",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/zhuyein.png",
+        "selectedIconPath": "static/zhuyeout.png"
+      },
+      {
+        "pagePath": "pages/classlist/classlist",
+        "text": "我的课程",
+        "iconPath": "static/bookout.png",
+        "selectedIconPath": "static/bookin.png",
+        "enablePullDownRefresh": true
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "个人中心",
+        "iconPath": "static/mein.png",
+        "selectedIconPath": "static/meout.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

@@ -1,0 +1,20 @@
+<!--pages/admin/admin.wxml-->
+<view class="cover-box">
+  <text class="texts">kks微信端后台</text>
+  <view class="all" >
+    <view  class="item">
+      <button class="btn1" bindtap="goadduser" >用户添加</button>
+    </view>
+    <view  class="item">
+      <button class="btn2"  bindtap="goaddclass">课程添加</button>
+    </view>
+  </view>
+  <view class="all">
+    <view class="item">
+      <button class="btn3"  bindtap="gouandc">课程绑定</button>
+    </view>
+    <view class="item">
+      <button class="btn4">日志</button>
+    </view>
+  </view>
+</view>

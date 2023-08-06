@@ -1,0 +1,45 @@
+<!--pages/log/log.wxml-->
+<view class="log1">
+<view class="log11">
+<view>签到信息</view>
+<view class="divLine"></view>
+<view class style="display: flex;margin-left: 5%;">
+    <view class="name">姓名</view>
+    <view class="name1">课程</view>
+    <view class="times">签到时间</view>
+  </view>
+<scroll-view scroll-y="true"  class="log111">
+<block wx:for="{{lists.qdlist}}"   wx:key="index"  > 
+  <view class="divLine"></view>
+  <view class = "logs">
+    <view class="name">{{item.name}}</view>
+    <view class="name1">{{item.class}}</view>
+    <view class="times">{{item.times}}</view>
+  </view>
+</block>
+</scroll-view>
+<!-- <view class="divLine"></view> -->
+</view>
+<view class="log11">
+<view>登录信息</view>
+<view class="divLine"></view>
+<view class style="display: flex;margin-left: 5%;">
+    <view class="name">姓名</view>
+    <view class="name1">IP</view>
+    <view class="times">登录时间</view>
+  </view>
+
+<scroll-view scroll-y="true" class="log111">
+<block wx:for="{{lists.dllist}}"   wx:key="index"  > 
+  <view class="divLine"></view>
+  <view class = "logs">
+    <view class="name">{{item.name}}</view>
+    <view class="name1">{{item.ip}}</view>
+    <view class="times">{{item.times}}</view>
+  </view>
+</block>
+</scroll-view>
+<view class="divLine"></view>
+</view>
+
+</view>

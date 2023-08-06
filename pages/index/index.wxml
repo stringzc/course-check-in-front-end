@@ -1,0 +1,31 @@
+<!--pages/index/index.wxml-->
+<view class="all">
+<view class="s1">
+<swiper class="s11" indicator-dots='true' display-multiple-items='1' current='{{ centerItem }}'   previous-margin='30' next-margin='30' autoplay='true' circular='true' interval='3000'>
+  <block wx:for="{{coverList}}" wx:key="id">
+    <swiper-item>
+      <view class='imageBox' style='text-align:center'>
+      <view class='mask' wx:if='{{ index != centerItem }}'></view>
+      <image src="{{item.url}}" mode="aspectFill" /></view>
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+<view class="s3">
+  <view class="s31">
+    <image class="s311" src="/static/hot.jpg" ></image>
+    <view class="s312">热门活动</view>
+  </view>
+  <view class="s31">
+    <image class="s311" src="/static/study.jpg" ></image>
+    <view class="s312">课堂风采</view>
+  </view>
+  <view class="s31">
+    <image class="s311" src="/static/ronyu.jpg" ></image>
+    <view class="s312">荣誉证书</view>
+  </view>
+</view>
+<view class="s2">
+  <image src="/static/liuc.png"  class="liuc"></image>
+</view>
+</view>

@@ -1,0 +1,59 @@
+/* pages/index/index.wxss */
+/**index.wxss**/
+page{
+  width: 100%;
+  height: 100%;
+}
+.all{
+  width: 100%;
+  height: 100%;
+  background-color:rgb(255, 102, 0);
+}
+.s1{
+  height: 35%;
+  width: 100%;
+}
+.s11 {
+  height:100%;
+}
+.s11.mask {
+  width: 100%;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.s2{
+ height:  40%;
+ margin: 5%;
+}
+.liuc{
+  height: 115%;
+  width: 100%;
+  /* margin-left: 10%; */
+  /* margin-right: 5%; */
+}
+.s3{
+  height: 16%;
+  display: flex;
+}
+.s31
+{
+  width: 33%;
+  margin: 5%;
+}
+.s311
+{
+  height: 80%;
+  width: 80%;
+  box-shadow: 0 0 100rpx rgba(20, 14, 14, 0.15);
+  border-radius: 120rpx;
+}
+.s312
+{
+  margin-left: 8%;
+  color: rgb(31, 9, 9);
+  font-weight: 600;
+  font-size: 100%;
+}

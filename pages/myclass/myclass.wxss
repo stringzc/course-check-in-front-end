@@ -1,0 +1,103 @@
+/* pages/myclass/myclass.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.container{
+  height: 100%;
+}
+.s1{
+  height: 85%;
+}
+.s11 {
+  height: 30%;
+}
+.slide-image {
+    height: auto;
+    width: 100%;
+}
+.s12{
+  height: 8%;
+  display: flex;
+}
+.s121{
+  width: 60%;
+  font-weight:600;
+}
+.s122{
+  width: 40%;
+  color: rgb(240, 23, 23);
+  font-weight:600;
+  font-size: 110%;
+}
+.s13{
+  height: 8%;
+  display: flex;
+}
+.s131{
+  width: 60%;
+  font-weight:600;
+}
+.s132{
+  width: 40%;
+  color: rgb(240, 23, 23);
+  font-weight:600;
+  font-size: 110%;
+}
+.s14{
+  height: auto;
+}
+.s141
+{
+  font-size: 90%;
+  font-weight: 300;
+  color: rgb(170, 155, 155);
+}
+.s2{
+  height: 15%;
+}
+.dibu{
+  overflow:hidden;
+	margin-bottom:0;
+	width:100%;
+	position:fixed;
+	bottom:0px;
+	display:flex;
+	justify-content:center;
+}
+.returns{
+  width: 40%;
+  color: #f5fbfdde;
+  font-size: 15pt;
+  font-weight: 600;
+  background-color: #FF6666;
+}
+.returns:active{
+  background-color: rgba(205, 224, 31, 0.664);
+}
+.qiandao{
+  width: 40%;
+  color: #f5fbfdde;
+  font-size: 15pt;
+  font-weight: 600;
+  background-color: #FF6666;
+}
+.qiandao:active{
+  background-color: rgba(205, 224, 31, 0.664);
+}
+.layer {
+  position: absolute;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+}
+/*分割线样式*/
+.divLine{
+  background: #E0E3DA;
+  width: 100%;
+  height: 10rpx;
+ }
+ .fonts{
+   font-weight: 600;
+   font-size: 110%;
+ }

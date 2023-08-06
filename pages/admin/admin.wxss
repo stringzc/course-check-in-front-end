@@ -1,0 +1,91 @@
+/* pages/admin/admin.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+
+.cover-box{
+  position: fixed;
+  background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
+  background-image: url(https://pic1.zhimg.com/v2-7cbd1642a4e361f039955d9c21d7c9b0_r.jpg?source=1940ef5c);
+}
+.texts{
+  /* 字体大小 */
+  font-size: 20px;
+  /* 字体颜色 */
+  color: red;
+  /* 字体风格-粗细 */
+  font-weight: bold;
+  /* 外边距 */
+  margin:25%  ;
+}
+
+.all{
+  margin-top: 20%;
+  display: flex;
+  height: 30%;
+}
+.item{
+  width: 50%;
+  height: 100%;
+}
+.btn1{
+  width: 80%;
+  height: 80%;
+  border: none;
+  border-radius: 30px;
+  line-height: 320rpx;
+  text-align: center;
+  color: #f8f7f2;
+  font-size: 20pt;
+  background: #F15F79; 
+}
+.btn1:active{
+  background-color: #131003;
+}
+.btn2{
+  width: 80%;
+  height: 80%;
+  border: none;
+  border-radius: 30px;
+  line-height: 320rpx;
+  text-align: center;
+  color: #f3d346;
+  font-size: 20pt;
+  background: #457fca; 
+  
+}
+.btn2:active{
+  background-color: #b40d98;
+}
+.btn3{
+  width: 80%;
+  height: 80%;
+  border: none;
+  border-radius: 30px;
+  line-height: 320rpx;
+  text-align: center;
+  color: #63582d;
+  font-size: 20pt;
+  background: #5ff17f; 
+  
+}
+.btn3:active{
+  background-color: #ecc619;
+}
+.btn4{
+  width: 80%;
+  height: 80%;
+  border: none;
+  border-radius: 30px;
+  line-height: 320rpx;
+  text-align: center;
+  color: #141101;
+  font-size: 20pt;
+  background: #f15fc0; 
+}
+.btn4:active{
+  background-color: #f3f0e5;
+}

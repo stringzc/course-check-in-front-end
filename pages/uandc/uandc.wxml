@@ -1,0 +1,55 @@
+<!--pages/uandc/uandc.wxml-->
+<!--pages/handsignin/handsignin.wxml-->
+<view class="all">
+  <view class="first">
+    <input class="f1"  bindinput="getinfo"  auto-focus placeholder="请输入学生姓名(手机号码)"/>
+  </view>
+  <view class="second">
+    <button class="f2"  bindtap="qiandaofind">查询</button>
+    <button class="f2"  bindtap="qiandaoclear">清空</button>
+  </view>
+  <view class="first">
+    <text class="texts">姓名：{{sname}}</text>
+  </view>
+  <view class="first">
+    <text class="texts">电话号码：{{sphone}}</text>
+  </view>
+
+<view class='line'></view>
+<view class="text">已绑定课程</view>
+<scroll-view scroll-y="true" style="height: 85px">
+<block wx:for="{{myclasslist}}"   wx:key="index"  > 
+  <view class = "chanpin">
+    <image class="chanpin-img" src="https://www.stringzc.top/{{item.images}}"></image>
+    <view class="chanpin-info">
+      <view class="name">{{item.class}}</view>
+      <view class="sales">{{item.description}}</view>
+    </view>
+    <view class="chanpin-num">
+      <text class="mytext">剩余{{item.RC}}课时</text>
+      <button  class='goodbutton'  hover-class="hover"  data-id="{{item.id}}" bindtap="tuike">退课</button>
+    </view>
+  </view>
+</block>
+</scroll-view>
+
+<view class='line'></view>
+<view class="text">可绑定课程</view>
+<scroll-view scroll-y="true" style="height: 370px">
+<block wx:for="{{classlist}}"   wx:key="index"  > 
+  <view class = "chanpin">
+    <image class="chanpin-img" src="https://www.stringzc.top/{{item.images}}"></image>
+    <view class="chanpin-info">
+      <view class="name">{{item.class}}</view>
+      <view class="sales">{{item.description}}</view>
+    </view>
+    <view class="chanpin-num">
+      <text class="mytext">计划{{item.keshi}}课时</text>
+      <button  class='goodbutton'  hover-class="hover"  data-id="{{item.id}}" bindtap="qiandao">绑定</button>
+    </view>
+  </view>
+</block>
+</scroll-view>
+
+
+</view>

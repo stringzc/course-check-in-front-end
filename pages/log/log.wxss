@@ -1,0 +1,38 @@
+/* pages/log/log.wxss */
+page{
+  height: 100%;
+  width: 100%;
+}
+.log1{
+  height: 100%;
+  width: 100%;
+}
+.log11{
+  height: 50%;
+  width: 100%;
+}
+.log111{
+  height: 90%;
+  width: 100%;
+}
+
+.divLine{
+  background: #E0E3DA;
+  width: 100%;
+  height: 10rpx;
+ }
+ .logs{
+   display: flex;
+   height: 8%;
+   margin-left: 5%;
+ }
+.name{
+  width: 15%;
+}
+.name1{
+  width: 45%;
+}
+.times{
+  width: 40%;
+  /* margin-left: 15%; */
+}

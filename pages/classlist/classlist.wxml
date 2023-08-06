@@ -1,0 +1,59 @@
+<!--pages/classlist/classlist.wxml-->
+<!-- <view class="top">
+  <view class="topsearch">
+    <view class="frame">
+      <input value="{{shoopingtext}}" bindinput="shoppinginput"></input>
+    </view>
+    <text bindtap="search">搜索</text>
+  </view>
+</view>
+<view class="history" wx:if="{{history}}">
+  <view class="history_title">
+    <text>历史搜索</text>
+    <image src="../../img/icon/login/icon_close_orange.png" mode="widthFix" style="width:5%;" bindtap="cleanhistory"></image>
+  </view>
+  <view class="history_text">
+    <text wx:for="{{newArray}}" wx:key="key" data-text="{{item}}" bindtap="textfz">{{item}}</text>
+  </view>
+</view>
+<view class="none" wx:if="{{noneview}}">
+  <image src="/images/null.png" mode="widthFix" style="width:20%"></image>
+  <text>抱歉，没有相关商品</text>
+</view>
+<view class='swiper_con' wx:if="{{shoppinglist}}">
+  <view class='swiper_con_view' wx:for="{{shoopingarray}}" wx:key="id" wx:if='{{item.status=="1"?true:false}}'>
+    <image src="{{item.images}}" mode="widthFix" style="width:100%" data-status="{{item.status}}"></image>
+    <view style="width:90%;margin:5%;">
+      <text style="font-size:24rpx">{{item.title}}</text>
+      <view class="swiper_con_view_view">
+        <view style="width:80%;">
+          <text style="font-size:24rpx;color:red;">￥{{item.money}}</text>
+          <text style="font-size:18rpx;color:#B8B8B8;margin-left:5%;">已售{{item.sold}}</text>
+        </view>
+        <image src="/images/cart.png" mode="widthFix" style="width:10%;position:relative;left:8%;"></image>
+      </view>
+    </view>
+  </view>
+</view> -->
+
+<view>
+<block wx:for="{{classlist}}"   wx:key="index"  >
+  <view class="danhao"> 课程开始时间：  {{item.times}}</view>  
+  <view class = "chanpin">
+    <image class="chanpin-img" src="https://www.stringzc.top/{{item.images}}"></image>
+    <view class="chanpin-info">
+      <view class="name">{{item.class}}</view>
+      <view class="sales">{{item.description}}</view>
+      <view class="price">课程计划{{item.keshi}}课时</view>
+    </view>
+    <view class="chanpin-num">
+      <text class="mytext">剩余{{item.RC}}课时</text>
+      <button  class='goodbutton'  hover-class="hover"  data-id="{{item.id}}" bindtap="clickme">查看</button>
+    </view>
+  </view>
+</block>
+<view wx:if="{{fails}}"  class="fails">
+    <image src="/static/mdl.jpg"></image>
+    <text style="color: rgb(231, 9, 9); font-size: medium;">还没有登录哟!</text>
+</view>
+</view>

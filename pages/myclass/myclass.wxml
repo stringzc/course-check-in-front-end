@@ -1,0 +1,51 @@
+<!--pages/myclass/myclass.wxml-->
+<view class='container' hidden='{{hidden}}'>
+<view class="s1">
+<swiper autoplay="{{true}}" circular="{{true}}" indicator-dots="{{true}}" interval="2000"class="s11">
+ <block wx:for="{{myclass.imagelist}}" wx:key="urls">
+    <swiper-item>
+      <image src="{{item.urls}}" class="slide-image" mode="widthFix" data-src='{{item.urls}}' />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="s12">
+  <view class="s121">{{myclass.class}}</view>
+  <text class="s122">课程计划{{myclass.keshi}}课时</text>
+</view>
+<view class="s13">
+  <text class="s131">课程时长1.5小时</text>
+  <text class="s132">剩余课时数:{{myclass.RC}}</text>
+</view>
+<!--课程详情-->
+<view class="s14">
+  <view>课程详情:</view>
+  <view class="s141">
+      {{myclass.descriptionall}}
+  </view>
+</view>
+</view>
+<view class="s2">
+<view class="dibu">
+  <button class="returns" bindtap="returns">返回</button>
+  <button class="qiandao" bindtap="qd">签到详情</button>
+</view>
+</view>
+</view>
+<view class="layer" animation="{{pwdAnimationData}}">
+  <view style="margin-left: 22%; font-weight: 600; color: brown;font-size: 120%;">{{myclass.class}}签到详情</view>
+  <scroll-view scroll-y="true" style="height: 92%">
+  <block wx:for="{{myclass.qdlist}}"   wx:key="index"  >
+  <view>
+    <view class="divLine"></view>
+    <view style="display: flex;">
+      <view class="fonts" style="width: 20%;margin-left: 5%;">编号:{{item.id}}</view>
+      <view class="fonts" style="width: 80%; margin-left: 10%;"> 签到时间：{{item.times}}</view>  
+    </view>
+  </view>
+</block>
+  <view class="divLine"></view>
+  </scroll-view>
+    <view style="height: auto;">
+      <button class="btnConfirm" bindtap='cancel'>返回</button>
+  </view>
+</view>
