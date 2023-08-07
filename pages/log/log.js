@@ -74,7 +74,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    let that = this
+    getApp().helper({
+      url: getApp().globalData.urlpath + '/logs',
+        data: {
+          ID: "wx"
+        },
+        success(res) {
+          that.setData({
+            lists:res.data
+          })
+        },
+        fail(res) {
+          wx.showToast({
+            title: '连接服务器失败',
+            image: '/static/error.png',
+            duration: 1500
+          });
+        }
+      });
+    
   },
 
   /**

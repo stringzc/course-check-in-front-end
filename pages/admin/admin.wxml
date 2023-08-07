@@ -14,7 +14,7 @@
       <button class="btn3"  bindtap="gouandc">课程绑定</button>
     </view>
     <view class="item">
-      <button class="btn4">日志</button>
+      <button class="btn4"  bindtap="gologs">日志</button>
     </view>
   </view>
 </view>

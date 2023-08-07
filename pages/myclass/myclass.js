@@ -65,25 +65,26 @@ Page({
   onLoad: function (options) {
     var ids = options.key
     var that = this
-    // console.log(ids)
-    // getApp().helper({
-    //   url: getApp().globalData.urlpath + '/myclass',
-    //   data:{
-    //     id:ids,
-    //   },
-    //   success(res){
-    //     that.setData({
-    //        myclass: res.data
-    //     });
-    //   },
-    //   fail(res){
-    //     wx.showToast({
-    //       title: '连接服务器失败',
-    //       image: '/static/error.png',
-    //       duration: 1500
-    //     });
-    //   }
-    // });
+    console.log(ids)
+    getApp().helper({
+      url: getApp().globalData.urlpath + '/myclass',
+      data:{
+        id:ids,
+        ID:"wx"
+      },
+      success(res){
+        that.setData({
+           myclass: res.data
+        });
+      },
+      fail(res){
+        wx.showToast({
+          title: '连接服务器失败',
+          image: '/static/error.png',
+          duration: 1500
+        });
+      }
+    });
     this.animation = wx.createAnimation({
       duration: 400, // 整个动画过程花费的时间，单位为毫秒
       timingFunction: "ease", // 动画的类型

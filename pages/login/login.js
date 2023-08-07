@@ -37,7 +37,8 @@ Page({
         url: getApp().globalData.urlpath + '/weixinlogin',
         data: {
           username: username,
-          password: password
+          password: password,
+          ID:"wx"
         },
         success(res) {
           console.log(res);

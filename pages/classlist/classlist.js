@@ -7,7 +7,7 @@ Page({
   data: {
     username:"",
     classlist:[],
-    fails:false
+    fails:"1"
   },
   
   clickme: function (e){
@@ -29,7 +29,7 @@ Page({
         content: '请先登录',
       })
       that.setData({
-        fails:true
+        fails:"1"
       })
     }
     else{
@@ -41,8 +41,8 @@ Page({
       success(res) {
         console.log(res);
         that.setData({
-          classlist:res.data,
-          fails: false
+          classlist:res.data.classlist,
+          fails: res.data.res
         })
       },
       fail(res) {

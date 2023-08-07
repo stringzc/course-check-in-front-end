@@ -52,8 +52,12 @@
     </view>
   </view>
 </block>
-<view wx:if="{{fails}}"  class="fails">
+<view wx:if="{{fails == 1}}"  class="fails">
     <image src="/static/mdl.jpg"></image>
     <text style="color: rgb(231, 9, 9); font-size: medium;">还没有登录哟!</text>
+</view>
+<view wx:if="{{fails == 2}}"  class="fails">
+    <image src="/static/mdl.jpg"></image>
+    <text style="color: rgb(231, 9, 9); font-size: medium;">目前没有正在进行的课程哟!</text>
 </view>
 </view>

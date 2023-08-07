@@ -73,6 +73,11 @@ Page({
       url: '/pages/adduser/adduser',
     })
   },
+  gologs(){
+    wx.navigateTo({
+      url: '/pages/log/log',
+    })
+  },
   goaddclass(){
     wx.navigateTo({
       url: '/pages/addclass/addclass',
