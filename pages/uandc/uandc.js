@@ -14,7 +14,8 @@ Page({
         images:"static/3.jpg",
         class:"c+++++++",
         description:"this is a class",
-        RC:"20"
+        RC:"20",
+        id:"1+1"
       }
     ],
     classlist:[
@@ -22,43 +23,50 @@ Page({
         images:"static/3.jpg",
         class:"c+++++++",
         description:"this is a class",
-        keshi:"20"
+        keshi:"20",
+        id:'1'
       },
       {
         images:"static/3.jpg",
         class:"c+++++++",
         description:"this is a class",
-        keshi:"20"
+        keshi:"20",
+        id:'1'
       },
       {
         images:"static/3.jpg",
         class:"c+++++++",
         description:"this is a class",
-        keshi:"20"
+        keshi:"20",
+        id:'1'
       },
       {
         images:"static/3.jpg",
         class:"c+++++++",
         description:"this is a class",
-        keshi:"20"
+        keshi:"20",
+        id:'1'
       },
       {
         images:"static/3.jpg",
         class:"c+++++++",
         description:"this is a class",
-        keshi:"20"
+        keshi:"20",
+        id:'1'
       },
       {
         images:"static/3.jpg",
         class:"c+++++++",
         description:"this is a class",
-        keshi:"20"
+        keshi:"20",
+        id:'1'
       },
       {
         images:"static/3.jpg",
         class:"c+++++++",
         description:"this is a class",
-        keshi:"20"
+        keshi:"20",
+        id:'1'
       }
     ]
   },
@@ -119,13 +127,6 @@ Page({
   tuike(e){
     var ids = e.currentTarget.dataset.id
     var that = this;
-    if (values.length == 0 ) {
-      wx.showModal({
-        title: '提示',
-        content: '用户名或者电话号码不能为空',
-      })
-    } else {
-      // 这里是登录验证
       getApp().helper({
         url: getApp().globalData.urlpath + '/tuike',
         data: {
@@ -133,8 +134,7 @@ Page({
           ID:"wx"
         },
         success(res) {
-          
-          
+          that.bdfind()
         },
         fail(res) {
           wx.showToast({
@@ -144,7 +144,40 @@ Page({
           });
         }
       });
-    }
+    
+  },
+  bd(){
+    var ids = e.currentTarget.dataset.id
+    var that = this;
+      getApp().helper({
+        url: getApp().globalData.urlpath + '/bd',
+        data: {
+          ids: ids,
+          ID:"wx"
+        },
+        success(res) {
+          that.bdfind()
+        },
+        fail(res) {
+          wx.showToast({
+            title: '连接服务器失败',
+            image: '/static/error.png',
+            duration: 1500
+          });
+        }
+      });
+    
+  
+  },
+  bdclear(){
+    this.setData({
+      values:"",
+      shows:false,
+      sname:"",
+      sphone:"",
+      myclasslist:[],
+      classlist:[]
+    })
   },
   /**
    * 生命周期函数--监听页面加载

@@ -5,10 +5,33 @@ Page({
    * 页面的初始数据
    */
   data: {
+    username:"",
+    userphone:"",
+    password:"",
+    power:"1",
+    array:["1","2","3","4"],
+    index:0
+  },
+  pickerChange:function(e){
+    console.log(e.detail.value);
+    this.setData({
+      index:e.detail.value
+    })
+  },
+  names(e){
+    this.setData({
+      username:e.detail.value
+    })
+  },
+  phones(){
 
   },
+  pswd(){
 
- 
+  },
+  checkpswd(){
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */

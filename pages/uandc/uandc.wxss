@@ -39,9 +39,9 @@ page{
 }
 .f2{
   width: 40%;
-  height: auto;
+  height: 50rpx;
   border: auto;
-  border-radius: 30rpx;
+  border-radius:11 40rpx;
   line-height: 120%;
   text-align: center;
   color: #f8f7f2;
