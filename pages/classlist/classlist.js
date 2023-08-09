@@ -36,13 +36,14 @@ Page({
     getApp().helper({
       url: getApp().globalData.urlpath + '/getclass',
       data: {
-        username: username
+        username: username,
+        ID:"wx"
       },
       success(res) {
         console.log(res);
         that.setData({
           classlist:res.data.classlist,
-          fails: res.data.res
+          fails: res.data.ret
         })
       },
       fail(res) {

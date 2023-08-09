@@ -6,8 +6,13 @@ Page({
    */
   data: {
     username:"",
+    nameshow:false,
     userphone:"",
+    phoneshow:false,
     password:"",
+    pswdshow:false,
+    checkpassword:"",
+    cpshow:false,
     power:"1",
     array:["1","2","3","4"],
     index:0
@@ -22,15 +27,133 @@ Page({
     this.setData({
       username:e.detail.value
     })
+    console.log(123)
+    if(this.data.username.length == 0)
+    {
+        this.setData({
+          nameshow:true
+        })
+    }
+    else{
+      this.setData({
+        nameshow:false
+      })
+    }
   },
-  phones(){
+  phones(e){
 
+    this.setData({
+      userphone:e.detail.value
+    })
+    console.log(123)
+    if(this.data.userphone.length == 0)
+    {
+        this.setData({
+          phoneshow:true
+        })
+    }
+    else{
+      this.setData({
+        phoneshow:false
+      })
+    }
+  
   },
-  pswd(){
-
+  pswd(e){ 
+    this.setData({
+      password:e.detail.value
+    })
+    if(this.data.password.length == 0)
+    {
+        this.setData({
+          pswdshow:true
+        })
+    }
+    else{
+      this.setData({
+        pswdshow:false
+      })
+    }
   },
-  checkpswd(){
-
+  checkpswd(e){
+    this.setData({
+      checkpassword:e.detail.value
+    })
+    var paswd = this.data.password
+    if(this.data.checkpassword != paswd)
+    {
+        this.setData({
+          cpshow:true
+        })
+    }
+    else{
+      this.setData({
+        cpshow:false
+      })
+    }
+  },
+  tijiao(){
+    var username = this.data.username
+    var password = this.data.password
+    var userphone = this.data.userphone
+    var ckpswd = this.data.checkpassword
+    var power = this.data.index
+    if (username.length == 0 || password.length == 0 || userphone.length == 0) {
+      wx.showModal({
+        title: '提示',
+        content: '用户名和密码还有手机号码不能为空',
+      })
+    } 
+    else if(ckpswd != password){
+      wx.showModal({
+        title: '提示',
+        content: '两次输入的密码不一致',
+      })
+    }
+    else {
+      getApp().helper({
+        url: getApp().globalData.urlpath + '/weixinzhuche',
+        data: {
+          username: username,
+          userphone:userphone,
+          password: password,
+          power:power,
+          ID:"wx"
+        },
+        success(res) {
+          console.log(res);
+          if (res.data.ret == 'F1') {
+            wx.showToast({
+              title: '注册成功',
+              icon: 'success',
+              duration: 1500
+            });
+          } 
+          else if(res.data.ret == 'F2'){
+            console.log(res.data);
+            wx.showModal({
+              title: '提示',
+              content: '用户名已存在',
+            })
+          }
+          else {
+            console.log(res.data);
+            wx.showModal({
+              title: '提示',
+              content: '手机号码已存在',
+            })
+          }
+        },
+        fail(res) {
+          wx.showToast({
+            title: '连接服务器失败',
+            image: '/static/error.png',
+            duration: 1500
+          });
+        }
+      });
+    }
+  
   },
   /**
    * 生命周期函数--监听页面加载

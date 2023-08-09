@@ -32,7 +32,8 @@ Page({
           id:"100",
           times:"2023.8.5"
         }
-      ]
+      ],
+      ret:false
     },
     pwdAnimationData:{},
     hidden: false
@@ -73,6 +74,7 @@ Page({
         ID:"wx"
       },
       success(res){
+        console.log(res)
         that.setData({
            myclass: res.data
         });

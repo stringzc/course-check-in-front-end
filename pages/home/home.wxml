@@ -9,13 +9,6 @@
   </view>
 </view>
 <view class="hr"></view>
-<!-- <view class="line"></view>
-  <view class='item' wx:if='{{adminpower >= 4}}'  bindtap="signin">
-    <view class="title">扫一扫签到</view>
-    <view class="detail2">
-      <text>></text>
-    </view>
-  </view> -->
   <view class="line"></view>
   <view class='item' wx:if="{{adminpower >= 3}}"  bindtap="handsignin">
     <view class="title">手动签到</view>
@@ -30,13 +23,20 @@
       <text>></text>
     </view>
   </view>
-  <view class="line"></view>
-  <view class='item' bindtap='changePassword' >
+  <!-- <view class="line"></view>
+  <view class='item' wx:if="{{adminpower >= 4}}"  bindtap="restart">
+    <view class="title">密码重置</view>
+    <view class="detail2">
+      <text>></text>
+    </view>
+  </view>
+  <view class="line"></view> -->
+  <!-- <view class='item' bindtap='changePassword' >
     <view class="title">修改密码</view>
     <view class="detail2">
       <text> ></text>
     </view>
-  </view>
+  </view> -->
   <view class="line"></view>
   <view class="item" bindtap='signOut'>
     <view class="title">注销登录</view>

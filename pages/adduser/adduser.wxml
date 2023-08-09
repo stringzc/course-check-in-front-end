@@ -15,18 +15,22 @@
     <view class="wei-input">
       <icon type="waiting" color="#44ADFB" size="16"></icon>
       <input class="input" auto-focus bindinput="names" placeholder="请输入用户名"/>
+      <view wx:if="{{nameshow}}">用户名不能为空</view>
     </view>
     <view class="wei-input">
       <icon type="waiting" color="#44ADFB" size="16"></icon>
       <input class="input" auto-focus bindinput="phones" placeholder="请输入手机号"/>
+      <view wx:if="{{phoneshow}}">手机号不能为空</view>
     </view>
     <view class="wei-input">
       <icon type="success" color="#44ADFB" size="16"></icon>
       <input class="input" auto-focus bindinput="pswd" placeholder="请输入密码"/>
+      <view wx:if="{{pswdshow}}">密码不能为空</view>
     </view>
     <view class="wei-input">
       <icon type="success" color="#44ADFB" size="16"></icon>
       <input class="input" auto-focus bindinput="checkpswd" placeholder="请确认密码"/>
+      <view wx:if="{{cpshow}}"  style="color: red;">密码不一致</view>
     </view>
     <view class="wei-input">
       <icon type="success" color="#44ADFB" size="16"></icon>
@@ -37,9 +41,7 @@
     </view>
   </view>
   <view class="sumbit-btn">
-    <button class="button" 
-    style="background-color: #d633ff;font-size: 30rpx;" 
-    type="primary">立即注册</button>
+    <button class="button" bindtap="tijiao" style="background-color: #d633ff;font-size: 30rpx;" type="primary">立即注册</button>
   </view>
 </view>
 <!-- 重影 -->
