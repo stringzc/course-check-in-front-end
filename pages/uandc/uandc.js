@@ -8,7 +8,8 @@ Page({
     values:"",
     sname:"将会显示学生姓名",
     sphone:"将会显示学生电话号码",
-    shows:false,
+    showmy:false,
+    showc:false,
     myclasslist:[
       {
         images:"static/3.jpg",
@@ -93,19 +94,16 @@ Page({
         },
         success(res) {
           console.log(res);
-          if (res.data.ret == 'F1') {
+          if (res.data.ret) {
               that.setData({
-                sname:res.data.sname,
-                sphone:res.data.sphone,
-                myclasslist:res.data.myclasslist,
-                classlist:res.data.classlist
-
+                values:res.data.datas.values,
+                showmy:res.data.datas.showmy,
+                showc:res.data.datas.showc,
+                sname:res.data.datas.sname,
+                sphone:res.data.datas.sphone,
+                myclasslist:res.data.datas.myclasslist,
+                classlist:res.data.datas.classlist
               });
-              if(that.data.myclasslist.length == 0){
-                  that.setData({
-                    shows:true
-                  })
-              }
           } else {
             console.log(res.data);
             wx.showModal({
@@ -134,6 +132,10 @@ Page({
           ID:"wx"
         },
         success(res) {
+          wx.showModal({
+            title: '提示',
+            content: '退课成功',
+          })
           that.bdfind()
         },
         fail(res) {
@@ -146,7 +148,7 @@ Page({
       });
     
   },
-  bd(){
+  bd(e){
     var ids = e.currentTarget.dataset.id
     var that = this;
       getApp().helper({
@@ -156,6 +158,10 @@ Page({
           ID:"wx"
         },
         success(res) {
+          wx.showModal({
+            title: '提示',
+            content: '退课成功',
+          })
           that.bdfind()
         },
         fail(res) {
@@ -172,7 +178,8 @@ Page({
   bdclear(){
     this.setData({
       values:"",
-      shows:false,
+      showmy:false,
+      showc:false,
       sname:"",
       sphone:"",
       myclasslist:[],

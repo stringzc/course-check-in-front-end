@@ -25,7 +25,7 @@
 <view class="divLine"></view>
 <view class style="display: flex;margin-left: 5%;">
     <view class="name">姓名</view>
-    <view class="name1">IP</view>
+    <view class="name1">电话</view>
     <view class="times">登录时间</view>
   </view>
 
@@ -41,5 +41,25 @@
 </scroll-view>
 <view class="divLine"></view>
 </view>
+<view class="log11">
+<view>课程绑定信息</view>
+<view class="divLine"></view>
+<view class style="display: flex;margin-left: 5%;">
+    <view class="name">姓名</view>
+    <view class="name1">课程</view>
+    <view class="times">绑定时间</view>
+  </view>
 
+<scroll-view scroll-y="true" class="log111">
+<block wx:for="{{lists.bdlist}}"   wx:key="index"  > 
+  <view class="divLine"></view>
+  <view class = "logs">
+    <view class="name">{{item.name}}</view>
+    <view class="name1">{{item.class}}</view>
+    <view class="times">{{item.times}}</view>
+  </view>
+</block>
+</scroll-view>
+<view class="divLine"></view>
+</view>
 </view>

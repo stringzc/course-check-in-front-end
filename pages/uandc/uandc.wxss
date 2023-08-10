@@ -15,7 +15,11 @@ page{
   width: 100%;
 }
 .s2{
-  height: 36%;
+  height: 50%;
+  width: 100%;
+}
+.s3{
+  height: 25%;
   width: 100%;
 }
 .first{
@@ -101,7 +105,7 @@ page{
 }
 .goodbutton {
   /* margin-top: 0px; */
-  width: 38%;
+  width: 40%;
   background-color: rgb(252, 126, 67);
   color: white;
   /* border-radius: 1rpx; */

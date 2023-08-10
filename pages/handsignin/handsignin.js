@@ -143,7 +143,8 @@ Page({
     getApp().helper({
       url: getApp().globalData.urlpath + '/QD',
       data: {
-        id: id
+        id: id,
+        ID:"wx"
       },
       success(res) {
         that.qiandaofind()
