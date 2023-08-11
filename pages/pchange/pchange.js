@@ -1,4 +1,4 @@
-// pages/addclass/addclass.js
+// pages/pchange/pchange.js
 Page({
 
   /**

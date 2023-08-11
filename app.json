@@ -7,10 +7,10 @@
     "pages/classlist/classlist",
     "pages/admin/admin",
     "pages/handsignin/handsignin",
-    "pages/addclass/addclass",
     "pages/adduser/adduser",
     "pages/uandc/uandc",
-    "pages/log/log"
+    "pages/log/log",
+    "pages/pchange/pchange"
   ],
   "window": {
     "navigationBarTitleText": "卡卡狮编程",

@@ -20,7 +20,7 @@
     <view class="wei-input">
       <icon type="waiting" color="#44ADFB" size="16"></icon>
       <input class="input" auto-focus bindinput="phones" placeholder="请输入手机号"/>
-      <view wx:if="{{phoneshow}}">手机号不能为空</view>
+      <view wx:if="{{phoneshow}}"  style="color: red;">手机号应是11位数字</view>
     </view>
     <view class="wei-input">
       <icon type="success" color="#44ADFB" size="16"></icon>

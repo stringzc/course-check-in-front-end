@@ -78,9 +78,9 @@ Page({
       url: '/pages/log/log',
     })
   },
-  goaddclass(){
+  gopchange(){
     wx.navigateTo({
-      url: '/pages/addclass/addclass',
+      url: '/pages/pchange/pchange',
     })
   },
   gouandc(){

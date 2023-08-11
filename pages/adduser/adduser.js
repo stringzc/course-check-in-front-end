@@ -14,7 +14,7 @@ Page({
     checkpassword:"",
     cpshow:false,
     power:"1",
-    array:["1","2","3","4"],
+    array:["1","2","3"],
     index:0
   },
   pickerChange:function(e){
@@ -45,8 +45,7 @@ Page({
     this.setData({
       userphone:e.detail.value
     })
-    console.log(123)
-    if(this.data.userphone.length == 0)
+    if( !(/^\d{11}$/.test(this.data.userphone)))
     {
         this.setData({
           phoneshow:true
@@ -57,6 +56,7 @@ Page({
         phoneshow:false
       })
     }
+
   
   },
   pswd(e){ 
@@ -98,6 +98,7 @@ Page({
     var userphone = this.data.userphone
     var ckpswd = this.data.checkpassword
     var power = this.data.index
+    var that = this
     if (username.length == 0 || password.length == 0 || userphone.length == 0) {
       wx.showModal({
         title: '提示',
@@ -112,7 +113,7 @@ Page({
     }
     else {
       getApp().helper({
-        url: getApp().globalData.urlpath + '/weixinzhuche',
+        url: getApp().globalData.urlpath + '/weixinregistered',
         data: {
           username: username,
           userphone:userphone,
@@ -128,6 +129,12 @@ Page({
               icon: 'success',
               duration: 1500
             });
+            that.setData({
+              username: "",
+              userphone:"",
+              password: "",
+              checkpassword:""
+            })
           } 
           else if(res.data.ret == 'F2'){
             console.log(res.data);
