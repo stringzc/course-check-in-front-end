@@ -34,7 +34,7 @@
   <view class="divLine"></view>
   <view class = "logs">
     <view class="name">{{item.name}}</view>
-    <view class="name1">{{item.ip}}</view>
+    <view class="name1">{{item.phone}}</view>
     <view class="times">{{item.times}}</view>
   </view>
 </block>

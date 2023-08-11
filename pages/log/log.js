@@ -10,61 +10,13 @@ Page({
         {name:"zczczc",
          class:"c+++++",
          times:"2023.08.06 14:22"
-      },
-      {name:"zczczc",
-         class:"c+++++",
-         times:"2023.08.06 14:22"
-      },
-      {name:"zczczc",
-         class:"c+++++",
-         times:"2023.08.06 14:22"
-      },
-      {name:"zczczc",
-         class:"c+++++",
-         times:"2023.08.06 14:22"
-      },
-      {name:"zczczc",
-         class:"c+++++",
-         times:"2023.08.06 14:22"
-      },
-      {name:"zczczc",
-      class:"c+++++",
-      times:"2023.08.06 14:22"
-   },
-    {name:"zczczc",
-         class:"c+++++++++++++",
-         times:"2023.08.06 14:22"
-      },
-      {name:"zczczc",
-      class:"c+++++",
-      times:"2023.08.06 14:22"
-   },
-   {name:"zczczc",
-   class:"c+++++",
-   times:"2023.08.06 14:22"
-},
+      }
       ],
       dllist:[
         {name:"zczczc",
-         ip:"127.255.255.255",
+         phone:"127.255.255.255",
          times:"2023.08.06 14:22"
-      },
-      {name:"zczczc",
-      ip:"127.0.0.1",
-         times:"2023.08.06 14:22"
-      },
-      {name:"zczczc",
-      ip:"127.0.0.1",
-         times:"2023.08.06 14:22"
-      },
-      {name:"zczczc",
-      ip:"127.0.0.1",
-         times:"2023.08.06 14:22"
-      },
-      {name:"zczczc",
-      ip:"127.0.0.1",
-         times:"2023.08.06 14:22"
-      },
+      }
       ],
       bdlist:[
         
@@ -85,7 +37,7 @@ Page({
         },
         success(res) {
           that.setData({
-            lists:res.data
+            lists:res.data.lists
           })
         },
         fail(res) {
