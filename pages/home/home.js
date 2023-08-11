@@ -13,19 +13,19 @@ Page({
     adminpower: 5
   },
 
-  passwordNew: function(e) {
+  passwordNew(e) {
     this.setData({
       passwordNew: e.detail.value
     })
   },
 
-  passwordConfirm: function(e) {
+  passwordConfirm(e) {
     this.setData({
       passwordConfirm: e.detail.value
     })
   },
 
-  changePassword: function(e) {
+  changePassword(e) {
     if (this.data.username.length == 0) {
       wx.showModal({
         title: '提示',
@@ -47,7 +47,7 @@ Page({
     })
   },
 
-  confirm: function(e) {
+  confirm(e) {
     var password = this.data.passwordNew;
     var passwordConfirm = this.data.passwordConfirm;
     var username = this.data.username;
@@ -103,7 +103,7 @@ Page({
     }
   },
 
-  cancel: function(e) {
+  cancel(e) {
     this.animation.bottom("-100%").height("0rpx").step();
     this.setData({
       pwdAnimationData: this.animation.export(),
@@ -118,19 +118,29 @@ Page({
       url: "/pages/login/login"
     })
   },
-  signin: function(e){
-    wx.navigateTo({
-      url: '/pages/signin/signin',
-    })
-  },
   handsignin: function(e){
     wx.navigateTo({
-      url: '/pages/handsignin/handsignin',
+      url: '/adminROOT/pages/handsignin/handsignin',
     })
   },
-  goadmin: function(e){
+  goadduser(){
     wx.navigateTo({
-      url: '/pages/admin/admin',
+      url: '/adminROOT/pages/adduser/adduser',
+    })
+  },
+  gologs(){
+    wx.navigateTo({
+      url: '/adminROOT/pages/log/log',
+    })
+  },
+  gopchange(){
+    wx.navigateTo({
+      url: '/adminROOT/pages/pchange/pchange',
+    })
+  },
+  gouandc(){
+    wx.navigateTo({
+      url: '/adminROOT/pages/uandc/uandc',
     })
   },
   helper: function (args) {

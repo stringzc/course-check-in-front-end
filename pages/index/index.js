@@ -9,23 +9,23 @@ Page({
     coverList:[
     {
       id: 0,
-      url: "https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/28701/26/2578/165950/5c1ee68bEefc827db/da9964a808e20ee8.jpg!q80.dpg"
+      url: "/static/img/4.jpg"
     },
     {
       id: 1,
-      url: "/static/jimushow1.jpg"
+      url: "/static/img/jimushow1.jpg"
     },
     {
       id: 2,
-      url: "/static/Scratcshow3.jpg"
+      url: "/static/img/Scratcshow3.jpg"
     },
     {
       id: 3,
-      url: "/static/pythonshow1.jpg"
+      url: "/static/img/pythonshow1.jpg"
     },
     {
       id: 4,
-      url: "/static/js1.jpg"
+      url: "/static/img/js1.jpg"
     }
   ],
 

@@ -12,7 +12,7 @@ page{
   width: 100%;
 }
 .log111{
-  height: 90%;
+  height: 78%;
   width: 100%;
 }
 
@@ -27,12 +27,12 @@ page{
    margin-left: 5%;
  }
 .name{
-  width: 15%;
+  width: 12%;
 }
 .name1{
   width: 45%;
 }
 .times{
-  width: 40%;
+  width: 70%;
   /* margin-left: 15%; */
 }

@@ -6,26 +6,26 @@
     <swiper-item>
       <view class='imageBox' style='text-align:center'>
       <view class='mask' wx:if='{{ index != centerItem }}'></view>
-      <image src="{{item.url}}" mode="aspectFill" /></view>
+      <image src="https://stringzc.top{{item.url}}" mode="aspectFill" /></view>
     </swiper-item>
   </block>
 </swiper>
 </view>
 <view class="s3">
   <view class="s31">
-    <image class="s311" src="/static/hot.jpg" ></image>
+    <image class="s311" src="https://stringzc.top/static/hot.jpg" ></image>
     <view class="s312">热门活动</view>
   </view>
   <view class="s31">
-    <image class="s311" src="/static/study.jpg" ></image>
+    <image class="s311" src="https://stringzc.top/static/study.jpg" ></image>
     <view class="s312">课堂风采</view>
   </view>
   <view class="s31">
-    <image class="s311" src="/static/ronyu.jpg" ></image>
+    <image class="s311" src="https://stringzc.top/static/ronyu.jpg" ></image>
     <view class="s312">荣誉证书</view>
   </view>
 </view>
 <view class="s2">
-  <image src="/static/liuc.png"  class="liuc"></image>
+  <image src="https://stringzc.top/static/liuc.png"  class="liuc"></image>
 </view>
 </view>

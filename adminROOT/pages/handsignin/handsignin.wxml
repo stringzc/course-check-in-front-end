@@ -1,0 +1,44 @@
+<!--pages/handsignin/handsignin.wxml-->
+<view class="all">
+  <view class="first">
+    <input class="f1"  bindinput="getname"  auto-focus placeholder="请输入待打卡的学生姓名"/>
+  </view>
+  <view class="second">
+    <button class="f2"  bindtap="qiandaofind">查询</button>
+    <button class="f2"  bindtap="qiandaoclear">清空</button>
+  </view>
+  <view class="first">
+    <text class="texts">姓名是：{{sname}}</text>
+  </view>
+  <view class="first">
+    <text class="texts">电话号码是：{{sphone}}</text>
+  </view>
+<scroll-view scroll-y="true" style="height: 40%;">
+<block wx:for="{{classlist}}"   wx:key="index"  > 
+  <view class = "chanpin">
+    <image class="chanpin-img" src="https://www.stringzc.top/{{item.images}}"></image>
+    <view class="chanpin-info">
+      <view class="name">{{item.class}}</view>
+      <view class="sales">{{item.description}}</view>
+    </view>
+    <view class="chanpin-num">
+      <text class="mytext">剩余{{item.RC}}课时</text>
+      <button  class='goodbutton'  hover-class="hover"  data-id="{{item.id}}" bindtap="qiandao" disabled="{{!item.ishow}}">签到</button>
+    </view>
+  </view>
+</block>
+</scroll-view>
+<view style="color: yellow; font-weight: 700; margin-left: 30%;">今天全部同学签到情况</view>
+<scroll-view scroll-y="true" style="height: 20%;">
+<view style="display: flex; ">
+<view style="width: 20%; margin-left: 10%; color: yellow; font-weight: 700;">姓名</view>
+<view style="width: 60%; color: yellow;font-weight: 700;">时间</view>
+</view>
+<block wx:for="{{logs}}"   wx:key="index" >
+<view style="display: flex; ">
+<view style="width: 20%; margin-left: 10%; color: yellow; font-weight: 700;">{{item.name}}</view>
+<view style="width: 60%; color: yellow;font-weight: 700;">{{item.times}}</view>
+</view>
+</block>
+</scroll-view>
+</view>

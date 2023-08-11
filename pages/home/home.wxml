@@ -4,7 +4,7 @@
 <!--头像名称-->
 <view class="partOne">
   <view class="header">
-    <image class="backgoud" src="/static/mybackground.jpg" mode="aspectFill"></image>
+    <image class="backgoud" src="https://stringzc.top/static/img/mybackground.jpg" mode="aspectFill"></image>
     <view class="userName" >你好！{{username}}</view>
   </view>
 </view>
@@ -17,26 +17,33 @@
     </view>
   </view>
   <view class="line"></view>
-  <view class='item' wx:if="{{adminpower >= 4}}"  bindtap="goadmin">
-    <view class="title">后台管理</view>
+  <view class='item' wx:if="{{adminpower >= 4}}"  bindtap="goadduser">
+    <view class="title">用户添加</view>
     <view class="detail2">
       <text>></text>
     </view>
   </view>
-  <!-- <view class="line"></view>
-  <view class='item' wx:if="{{adminpower >= 4}}"  bindtap="restart">
-    <view class="title">密码重置</view>
+  <view class="line"></view>
+  <view class='item' wx:if="{{adminpower >= 4}}"  bindtap="gouandc">
+    <view class="title">课程绑定</view>
     <view class="detail2">
       <text>></text>
     </view>
   </view>
-  <view class="line"></view> -->
-  <!-- <view class='item' bindtap='changePassword' >
-    <view class="title">修改密码</view>
+  <view class="line"></view>
+  <view class='item' wx:if="{{adminpower >= 4}}"  bindtap="gologs">
+    <view class="title">日志</view>
     <view class="detail2">
-      <text> ></text>
+      <text>></text>
     </view>
-  </view> -->
+  </view>
+  <view class="line"></view>
+  <view class='item' wx:if="{{adminpower >= 4}}"  bindtap="gopchange">
+    <view class="title">用户管理</view>
+    <view class="detail2">
+      <text>></text>
+    </view>
+  </view>
   <view class="line"></view>
   <view class="item" bindtap='signOut'>
     <view class="title">注销登录</view>

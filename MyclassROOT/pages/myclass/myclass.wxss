@@ -10,7 +10,7 @@ page{
   height: 85%;
 }
 .s11 {
-  height: 30%;
+  height: 40%;
 }
 .slide-image {
     height: auto;

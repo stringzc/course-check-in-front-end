@@ -1,10 +1,12 @@
 <!--pages/myclass/myclass.wxml-->
 <view class='container' hidden='{{hidden}}'>
 <view class="s1">
-<swiper autoplay="{{true}}" circular="{{true}}" indicator-dots="{{true}}" interval="2000"class="s11">
- <block wx:for="{{myclass.imagelist}}" wx:key="urls">
+<swiper class="s11" indicator-dots='true' display-multiple-items='1' current='{{ centerItem }}'   previous-margin='30' next-margin='30' autoplay='true' circular='true' interval='3000'>
+  <block wx:for="{{myclass.imagelist}}" wx:key="urls">
     <swiper-item>
-      <image src="https://www.stringzc.top/{{item.urls}}" class="slide-image" mode="widthFix" data-src='{{item.urls}}' />
+      <view  style='text-align:center'>
+      <view class='mask' wx:if='{{ index != centerItem }}'></view>
+      <image src="https://stringzc.top/{{item.urls}}" /></view>
     </swiper-item>
   </block>
 </swiper>

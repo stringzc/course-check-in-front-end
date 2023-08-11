@@ -14,25 +14,8 @@ Page({
       keshi:"20",
       time:"2023.6.1",
       RC:"100",
-      imagelist:[
-        {urls:"/static/c++.jpg"},
-        {urls:"/static/indexbj.jpg"},
-        {urls:"/static/logins.jpg"}
-      ],
-      qdlist:[
-        {
-          id:"100",
-          times:"2023.08.05 17:04"
-        },
-        {
-          id:"100",
-          times:"2023.8.5"
-        },
-        {
-          id:"100",
-          times:"2023.8.5"
-        }
-      ],
+      imagelist:[],
+      qdlist:[],
       ret:false
     },
     pwdAnimationData:{},

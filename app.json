@@ -3,20 +3,31 @@
     "pages/login/login",
     "pages/index/index",
     "pages/home/home",
-    "pages/myclass/myclass",
-    "pages/classlist/classlist",
-    "pages/admin/admin",
-    "pages/handsignin/handsignin",
-    "pages/adduser/adduser",
-    "pages/uandc/uandc",
-    "pages/log/log",
-    "pages/pchange/pchange"
+    "pages/classlist/classlist"
   ],
   "window": {
     "navigationBarTitleText": "卡卡狮编程",
     "navigationBarTextStyle": "black",
     "navigationBarBackgroundColor": "#FFE4C4"
   },
+  "subPackages":[
+    {
+      "root": "MyclassROOT/",
+      "pages": [
+        "pages/myclass/myclass"
+      ]
+    },
+    {
+      "root": "adminROOT/",
+      "pages": [
+        "pages/adduser/adduser",
+        "pages/handsignin/handsignin",
+        "pages/log/log",
+        "pages/pchange/pchange",
+        "pages/uandc/uandc"
+      ]
+    }
+  ],
   "tabBar": {
     "selectedColor": "#FF6A6A",
     "list": [
@@ -44,5 +55,7 @@
   "networkTimeout": {
     "request": 10000,
     "downloadFile": 10000
-  }
+  },
+  "lazyCodeLoading" : "requiredComponents"
+
 }

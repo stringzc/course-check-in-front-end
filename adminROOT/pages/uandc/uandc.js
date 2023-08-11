@@ -160,7 +160,7 @@ Page({
         success(res) {
           wx.showModal({
             title: '提示',
-            content: '退课成功',
+            content: '绑定成功',
           })
           that.bdfind()
         },

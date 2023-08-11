@@ -9,21 +9,8 @@ Page({
     sname:"查询成功会显示该学生用户名",
     sphone:"查询成功会显示该学生电话号码",
     ret:"",
-    classlist:[{
-      class:"c++算法竞赛",
-      images:"static/3.jpg",
-      description:"信息学竞赛课程",
-      RC:"1",
-      id:"1"
-    },
-    {
-      class:"c++语法 ",
-      images:"static/3.jpg",
-      description:"c++算法竞赛是高阶编程旨在参加小初高的算法竞赛，信息学竞赛",
-      RC:"1",
-      id:"2"
-    }
-  ]
+    classlist:[],
+  logs:[]
   },
 
   /**
@@ -100,7 +87,8 @@ Page({
       getApp().helper({
         url: getApp().globalData.urlpath + '/findQD',
         data: {
-          values: values
+          values: values,
+          ID: "wx"
         },
         success(res) {
           console.log(res)
@@ -109,7 +97,8 @@ Page({
             ret:res.data.ret,
             sname:res.data.sname,
             sphone:res.data.sphone,
-            classlist:res.data.classlist
+            classlist:res.data.classlist,
+            logs:res.data.qdlist
           })
           }
           else if(res.data.rer == "F2"){
@@ -140,6 +129,7 @@ Page({
     let id = res.currentTarget.dataset.id
     console.log(id)
     let that = this
+    if(getApp().globalData.username.length != 0){
     getApp().helper({
       url: getApp().globalData.urlpath + '/QD',
       data: {
@@ -148,6 +138,10 @@ Page({
       },
       success(res) {
         that.qiandaofind()
+        wx.showModal({
+          title: '提示',
+          content: '签到成功',
+        })
       },
       fail(res) {
         wx.showToast({
@@ -157,6 +151,13 @@ Page({
         });
       }
     });
+  }
+  else{
+    wx.showModal({
+      title: '提示',
+      content: '请先登录',
+    })
+  }
   },
   qiandaoclear: function(e)
   {

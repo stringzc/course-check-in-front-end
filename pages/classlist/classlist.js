@@ -14,7 +14,7 @@ Page({
     var id = e.currentTarget.dataset.id
     console.log(e)
     wx.navigateTo({
-      url: '/pages/myclass/myclass?key='+ id,
+      url: '/MyclassROOT/pages/myclass/myclass?key='+ id,
     })
   },
   

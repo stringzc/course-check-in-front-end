@@ -12,15 +12,15 @@ page{
 }
 .first{
   /* margin-top: 50%; */
-  height: 50px;
-  margin: 20px;
+  height: 5%;
+  margin: 20rpx;
   border: 10rpx solid #fa9a82;
   border-radius: 30rpx;
 }
 .f1{
   width: auto;
   height: 100%;
-  font-size: 20pt;
+  font-size: 15pt;
   color: #311116;
 }
 .f1:active{
@@ -31,21 +31,21 @@ page{
 }
 .f2{
   width: 40%;
-  height: 30%;
+  height: 20%;
   border: none;
   border-radius: 30px;
-  line-height: 120rpx;
+  line-height: 110rpx;
   text-align: center;
   color: #f8f7f2;
-  font-size: 20pt;
+  font-size: 15pt;
   background: #F15F79; 
 }
 .f2:active{
   background-color: #949ba0;
 }
 .texts{
-  font-size: 18pt;
-  color: #832b39;
+  font-size: 16pt;
+  color: #d4e20f;
 }
 .danhao{ 
   font-size: 12px; color: gray;
