@@ -91,7 +91,6 @@ Page({
           ID: "wx"
         },
         success(res) {
-          console.log(res)
           if(res.data.ret == "F1"){
             that.setData({
             ret:res.data.ret,
@@ -127,7 +126,6 @@ Page({
   },
   qiandao: function(res){
     let id = res.currentTarget.dataset.id
-    console.log(id)
     let that = this
     if(getApp().globalData.username.length != 0){
     getApp().helper({

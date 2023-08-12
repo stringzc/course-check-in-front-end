@@ -8,12 +8,12 @@ Page({
   data: {
     id:"",
     myclass:{
-      class:"c++sssss算法竞赛",
+      class:"",
       images:"static/3.jpg",
-      descriptionall:"随着互联网的新兴，计算机及其技术越来越受大众所熟知，也有越来越多的行业和岗位需要计算机技术，其中就有需要编程技术的工作。为了区分和提升人们的编程能力，培养杰出程序员，算法竞赛应运而生。它是专门考察编程技术的一项专门竞赛。有：面向青少年（小、中、高）的竞赛CSP和NOI，面向大学生的竞赛ACM-ICPC和CCPC。时至今日，参加算法竞赛依旧是升学、找工作的捷径和对个人能力的认可",
-      keshi:"20",
-      time:"2023.6.1",
-      RC:"100",
+      descriptionall:"",
+      keshi:"",
+      time:"",
+      RC:"",
       imagelist:[],
       qdlist:[],
       ret:false
@@ -49,7 +49,6 @@ Page({
   onLoad: function (options) {
     var ids = options.key
     var that = this
-    console.log(ids)
     getApp().helper({
       url: getApp().globalData.urlpath + '/myclass',
       data:{
@@ -57,7 +56,6 @@ Page({
         ID:"wx"
       },
       success(res){
-        console.log(res)
         that.setData({
            myclass: res.data
         });

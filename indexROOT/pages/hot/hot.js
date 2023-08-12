@@ -1,53 +1,13 @@
-// pages/index/index.js
+// indexROOT/pages/hot/hot.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    centerItem: 0,
-    coverList:[
-    {
-      id: 0,
-      url: "/static/img/4.jpg"
-    },
-    {
-      id: 1,
-      url: "/static/img/jimushow1.jpg"
-    },
-    {
-      id: 2,
-      url: "/static/img/Scratcshow3.jpg"
-    },
-    {
-      id: 3,
-      url: "/static/img/pythonshow1.jpg"
-    },
-    {
-      id: 4,
-      url: "/static/img/js1.jpg"
-    }
-  ],
 
   },
-  hot(){
-    wx.showModal({
-      title: '提示',
-      content: '正在开发中敬请期待',
-    })
-  },
-  cls(){
-    wx.showModal({
-      title: '提示',
-      content: '正在开发中敬请期待',
-    })
-  },
-  ronyu(){
-    wx.showModal({
-      title: '提示',
-      content: '正在开发中敬请期待',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -102,8 +62,5 @@ Page({
    */
   onShareAppMessage() {
 
-  },
-
-  
-
+  }
 })

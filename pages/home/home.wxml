@@ -52,8 +52,8 @@
     </view>
   </view>
   <view class="line"></view>
-  <view class="item">
-    <view class="title">意见反馈</view>
+  <view class="item" bindtap="goplun">
+    <view class="title" >意见反馈</view>
     <view class="detail2">
       <text> ></text>
     </view>

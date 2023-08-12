@@ -113,12 +113,12 @@ Page({
     })
   },
 
-  signOut: function (e) {
+  signOut(e) {
     wx.reLaunch({
       url: "/pages/login/login"
     })
   },
-  handsignin: function(e){
+  handsignin(e){
     wx.navigateTo({
       url: '/adminROOT/pages/handsignin/handsignin',
     })
@@ -141,6 +141,11 @@ Page({
   gouandc(){
     wx.navigateTo({
       url: '/adminROOT/pages/uandc/uandc',
+    })
+  },
+  goplun(){
+    wx.navigateTo({
+      url: '/adminROOT/pages/plun/plun',
     })
   },
   helper: function (args) {

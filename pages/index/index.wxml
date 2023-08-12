@@ -12,15 +12,15 @@
 </swiper>
 </view>
 <view class="s3">
-  <view class="s31">
+  <view class="s31" bindtap="hot">
     <image class="s311" src="https://stringzc.top/static/hot.jpg" ></image>
     <view class="s312">热门活动</view>
   </view>
-  <view class="s31">
+  <view class="s31" bindtap="cls">
     <image class="s311" src="https://stringzc.top/static/study.jpg" ></image>
     <view class="s312">课堂风采</view>
   </view>
-  <view class="s31">
+  <view class="s31" bindtap="ronyu">
     <image class="s311" src="https://stringzc.top/static/ronyu.jpg" ></image>
     <view class="s312">荣誉证书</view>
   </view>

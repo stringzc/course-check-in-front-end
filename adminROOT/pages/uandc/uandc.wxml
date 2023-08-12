@@ -3,7 +3,7 @@
 <view class="all">
 <view class="s1" >
   <view class="first">
-    <input class="f1"  bindinput="getinfo"  auto-focus placeholder="请输入学生姓名(手机号码)"/>
+    <input class="f1"  bindinput="getinfo"   placeholder="请输入学生姓名(手机号码)"/>
   </view>
   <view class="second">
     <button class="f2"  bindtap="bdfind">查询</button>
@@ -32,7 +32,7 @@
       <view class="sales">{{item.description}}</view>
     </view>
     <view class="chanpin-num">
-      <text class="mytext">剩余{{item.RC}}课时</text>
+      <text class="mytext">剩{{item.RC}}课时</text>
       <button  class='goodbutton'  hover-class="hover"  data-id="{{item.id}}" bindtap="tuike">退课</button>
     </view>
   </view>

@@ -10,15 +10,14 @@ Page({
     fails:"1"
   },
   
-  clickme: function (e){
+  clickme (e){
     var id = e.currentTarget.dataset.id
-    console.log(e)
     wx.navigateTo({
       url: '/MyclassROOT/pages/myclass/myclass?key='+ id,
     })
   },
   
-   onLoad: function (options) {
+   onLoad(options) {
     this.data.username = getApp().globalData.username
     let username = this.data.username
     let that = this
@@ -40,7 +39,6 @@ Page({
         ID:"wx"
       },
       success(res) {
-        console.log(res);
         that.setData({
           classlist:res.data.classlist,
           fails: res.data.ret
@@ -54,6 +52,9 @@ Page({
       });
     }
   })}  
+  },
+  onPullDownRefresh(){
+    this.onLoad()
   }
 
 })

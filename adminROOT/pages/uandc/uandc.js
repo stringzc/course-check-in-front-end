@@ -11,65 +11,8 @@ Page({
     showmy:false,
     showc:false,
     myclasslist:[
-      {
-        images:"static/3.jpg",
-        class:"c+++++++",
-        description:"this is a class",
-        RC:"20",
-        id:"1+1"
-      }
     ],
-    classlist:[
-      {
-        images:"static/3.jpg",
-        class:"c+++++++",
-        description:"this is a class",
-        keshi:"20",
-        id:'1'
-      },
-      {
-        images:"static/3.jpg",
-        class:"c+++++++",
-        description:"this is a class",
-        keshi:"20",
-        id:'1'
-      },
-      {
-        images:"static/3.jpg",
-        class:"c+++++++",
-        description:"this is a class",
-        keshi:"20",
-        id:'1'
-      },
-      {
-        images:"static/3.jpg",
-        class:"c+++++++",
-        description:"this is a class",
-        keshi:"20",
-        id:'1'
-      },
-      {
-        images:"static/3.jpg",
-        class:"c+++++++",
-        description:"this is a class",
-        keshi:"20",
-        id:'1'
-      },
-      {
-        images:"static/3.jpg",
-        class:"c+++++++",
-        description:"this is a class",
-        keshi:"20",
-        id:'1'
-      },
-      {
-        images:"static/3.jpg",
-        class:"c+++++++",
-        description:"this is a class",
-        keshi:"20",
-        id:'1'
-      }
-    ]
+    classlist:[]
   },
   getinfo(e){
     this.setData({
@@ -93,7 +36,6 @@ Page({
           ID:"wx"
         },
         success(res) {
-          console.log(res);
           if (res.data.ret) {
               that.setData({
                 values:res.data.datas.values,
@@ -105,7 +47,6 @@ Page({
                 classlist:res.data.datas.classlist
               });
           } else {
-            console.log(res.data);
             wx.showModal({
               title: '提示',
               content: '用户名或手机号码错误',

@@ -1,7 +1,7 @@
 <!--pages/handsignin/handsignin.wxml-->
 <view class="all">
   <view class="first">
-    <input class="f1"  bindinput="getname"  auto-focus placeholder="请输入待打卡的学生姓名"/>
+    <input class="f1"  bindinput="getname"   placeholder="请输入待打卡的学生姓名"/>
   </view>
   <view class="second">
     <button class="f2"  bindtap="qiandaofind">查询</button>

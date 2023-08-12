@@ -10,7 +10,7 @@
     "navigationBarTextStyle": "black",
     "navigationBarBackgroundColor": "#FFE4C4"
   },
-  "subPackages":[
+  "subPackages": [
     {
       "root": "MyclassROOT/",
       "pages": [
@@ -24,7 +24,8 @@
         "pages/handsignin/handsignin",
         "pages/log/log",
         "pages/pchange/pchange",
-        "pages/uandc/uandc"
+        "pages/uandc/uandc",
+        "pages/plun/plun"
       ]
     }
   ],
@@ -41,8 +42,7 @@
         "pagePath": "pages/classlist/classlist",
         "text": "我的课程",
         "iconPath": "static/bookout.png",
-        "selectedIconPath": "static/bookin.png",
-        "enablePullDownRefresh": true
+        "selectedIconPath": "static/bookin.png"
       },
       {
         "pagePath": "pages/home/home",
@@ -56,6 +56,5 @@
     "request": 10000,
     "downloadFile": 10000
   },
-  "lazyCodeLoading" : "requiredComponents"
-
+  "lazyCodeLoading": "requiredComponents"
 }

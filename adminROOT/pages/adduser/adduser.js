@@ -134,7 +134,8 @@ Page({
               userphone:"",
               password: "",
               checkpassword:""
-            })
+            });
+            that.onLoad();
           } 
           else if(res.data.ret == 'F2'){
             console.log(res.data);

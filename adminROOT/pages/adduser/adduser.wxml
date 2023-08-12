@@ -14,22 +14,26 @@
   <view class="input-box">
     <view class="wei-input">
       <icon type="waiting" color="#44ADFB" size="16"></icon>
-      <input class="input" auto-focus bindinput="names" placeholder="请输入用户名"/>
-      <view wx:if="{{nameshow}}">用户名不能为空</view>
+      <view>账号</view>
+      <input class="input"  bindinput="names" value="{{username}}"/>
+      <view wx:if="{{nameshow}}">不能为空</view>
     </view>
     <view class="wei-input">
       <icon type="waiting" color="#44ADFB" size="16"></icon>
-      <input class="input" auto-focus bindinput="phones" placeholder="请输入手机号"/>
-      <view wx:if="{{phoneshow}}"  style="color: red;">手机号应是11位数字</view>
+      <view>电话</view>
+      <input class="input"  bindinput="phones" value="{{userphone}}"/>
+      <view wx:if="{{phoneshow}}"  style="color: red;">11位数字</view>
     </view>
     <view class="wei-input">
       <icon type="success" color="#44ADFB" size="16"></icon>
-      <input class="input" auto-focus bindinput="pswd" placeholder="请输入密码"/>
+      <view>密码</view>
+      <input class="input"  bindinput="pswd" value="{{password}}"/>
       <view wx:if="{{pswdshow}}">密码不能为空</view>
     </view>
     <view class="wei-input">
       <icon type="success" color="#44ADFB" size="16"></icon>
-      <input class="input" auto-focus bindinput="checkpswd" placeholder="请确认密码"/>
+      <view>核对</view>
+      <input class="input"  bindinput="checkpswd" value="{{checkpassword}}"/>
       <view wx:if="{{cpshow}}"  style="color: red;">密码不一致</view>
     </view>
     <view class="wei-input">

@@ -1,0 +1,18 @@
+<!--adminROOT/pages/plun/plun.wxml-->
+<view class="start">
+<view class="title">
+    用户反馈中心
+</view>
+<view class="neiron">
+<view>
+  <input class="input"  bindinput="gettitle"   placeholder="请输入反馈标题"/>
+</view>
+<view class="texta">
+  <textarea class="textarea {{content==''?'placeholder':''}}" value="{{content}}" bindinput="gettext" maxlength="1000" auto-focus="true" auto-height="true"></textarea>
+</view>
+</view>
+<view class="ends">
+  <button class="btn" bindtap="todoit">提交</button>
+  <button class="btn" bindtap="back">返回</button>
+</view>
+</view>
