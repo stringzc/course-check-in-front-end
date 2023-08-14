@@ -5,9 +5,90 @@ Page({
    * 页面的初始数据
    */
   data: {
+    tabs: ['小程序管理', '用户管理', '信息管理'],
+    tabIndex: 0,
+    days:100,
+    users:50,
+    Hots:[
+      {
+        name:"c+++++",
+        color:"red",
+        width:"50%",
+        url:"/static/hf1.png"
+      },
+      {
+        name:"c+++++",
+        color:"#F3D853",
+        width:"60%",
+        url:"/static/hf2.png"
+      },
+      {
+        name:"c+++++",
+        color:"#F16D2F",
+        width:"70%",
+        url:"/static/hf3.png"
+      },
+      {
+        name:"c+++++",
+        color:"#F16D2F",
+        width:"70%",
+        url:"/static/hf3.png"
+      },
+      {
+        name:"c+++++",
+        color:"#F16D2F",
+        width:"70%",
+        url:"/static/hf3.png"
+      },
+      {
+        name:"c+++++",
+        color:"#F16D2F",
+        width:"70%",
+        url:"/static/hf3.png"
+      },
+      {
+        name:"c+++++",
+        color:"#F16D2F",
+        width:"70%",
+        url:"/static/hf3.png"
+      },
+      {
+        name:"c+++++",
+        color:"#F16D2F",
+        width:"70%",
+        url:"/static/hf3.png"
+      },
+      {
+        name:"c+++++",
+        color:"#F16D2F",
+        width:"70%",
+        url:"/static/hf3.png"
+      },
+      {
+        name:"c+++++",
+        color:"#F16D2F",
+        width:"70%",
+        url:"/static/hf3.png"
+      },
+      {
+        name:"c+++++",
+        color:"#F16D2F",
+        width:"70%",
+        url:"/static/hf3.png"
+      },
+
+
+    ],
+    kuan:500,
+    color:"red"
 
   },
-
+  onTabClick(e) {
+    let id = e.currentTarget.id;
+    this.setData({
+      tabIndex: id,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
