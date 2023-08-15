@@ -33,7 +33,7 @@ Page({
       wx.showModal({
         title: '提示',
         content: '请先登录',
-        success: function (res) {
+        success:(res) {
           if (res.confirm) {
             wx.reLaunch({
               url: "/pages/login/login"

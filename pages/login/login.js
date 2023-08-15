@@ -10,22 +10,23 @@ Page({
   },
 
   // 获取输入账号
-  usernameInput: function (e) {
+  usernameInput(e) {
     this.setData({
       username: e.detail.value
     })
   },
 
   // 获取输入密码
-  passwordInput: function (e) {
+  passwordInput(e) {
     this.setData({
       password: e.detail.value
     })
   },
 
-  login: function (args ) {
+  login(args ) {
     var username = this.data.username;
     var password = this.data.password;
+    var that = this;
     if (username.length == 0 || password.length == 0) {
       wx.showModal({
         title: '提示',
@@ -49,7 +50,7 @@ Page({
               duration: 1500
             });
             getApp().globalData.power = res.data.power;
-            getApp().globalData.username = username;
+            getApp().globalData.username = res.data.username;
             wx.switchTab({
               url: '../index/index',
             })
