@@ -17,60 +17,59 @@
         <view class="card"> 
         <view class="days">
           <view>小程序已运行:</view>
-          <view style="color: red; font-size: x-large; font-weight: 800;font-family:cursive;">{{days}}天</view>
+          <view class="tab1" >{{days}}天</view>
           </view>
           <view class="days">
           <view>月活跃用户:</view>
-          <view style="color: red; font-size: x-large; font-weight: 800; font-family:cursive;">{{users}}个</view>
+          <view class="tab1">{{users}}个</view>
           </view>
         </view>
-      <swiper indicator-dots='true' display-multiple-items='1'   previous-margin='30'  style="height: 350rpx;">
+      <swiper indicator-dots='true' display-multiple-items='1'   previous-margin='30' class="tabs1" >
           <swiper-item >
-            <view style="display: flex;">
-              <view style="width: 50%;">
-              <image src="/static/sjfx.png" style="border-radius: 300rpx; height: 200rpx; width: 250rpx; margin: 20rpx;"/>
-              <view style="margin-left: 70rpx;">数据分析</view>
+            <view class="tabs12">
+              <view class="tabs121">
+              <image src="/static/sjfx.png" class="tabs122" />
+              <view class="tabs123">数据分析</view>
               </view>
-              <view style="width: 50%;">
-                <image src="/static/yjzx.png" style="border-radius: 300rpx; height: 200rpx; width: 250rpx; margin: 20rpx;"/>
-                <view style="margin-left: 70rpx;">意见中心</view>
+              <view class="tabs121">
+                <image src="/static/yjzx.png" class="tabs122"/>
+                <view class="tabs123">意见中心</view>
               </view>
             </view>  
           </swiper-item>
           <swiper-item >
-            <view style="display: flex;">
-              <view style="width: 50%;">
-              <image src="/static/huodon.png" style="border-radius: 300rpx; height: 200rpx; width: 250rpx; margin: 20rpx;"/>
-              <view style="margin-left: 70rpx;">活动管理</view>
+            <view class="tabs12">
+              <view class="tabs121">
+              <image src="/static/huodon.png" class="tabs122"/>
+              <view class="tabs123">活动管理</view>
               </view>
-              <view style="width: 50%;">
-                <image src="/static/class.png" style="border-radius: 300rpx; height: 200rpx; width: 250rpx; margin: 20rpx;"/>
-                <view style="margin-left: 70rpx;">课堂管理</view>
+              <view class="tabs121">
+                <image src="/static/class.png" class="tabs122"/>
+                <view class="tabs123">课堂管理</view>
               </view>
             </view>
           </swiper-item>
           <swiper-item >
-            <view style="display: flex;">
-              <view style="width: 50%;">
-              <image src="/static/ronyu.png" style="border-radius: 300rpx; height: 200rpx; width: 250rpx; margin: 20rpx;"/>
-              <view style="margin-left: 70rpx;">证书管理</view>
+            <view class="tabs12">
+              <view class="tabs121">
+              <image src="/static/ronyu.png" class="tabs122"/>
+              <view class="tabs123">证书管理</view>
               </view>
-              <view style="width: 50%;">
-                <image src="/static/vedio.png" style="border-radius: 300rpx; height: 200rpx; width: 250rpx; margin: 20rpx;"/>
-                <view style="margin-left: 70rpx;">视频课管理</view>
+              <view class="tabs121">
+                <image src="/static/vedio.png" class="tabs122"/>
+                <view class="tabs123">视频课管理</view>
               </view>
             </view>
-           
           </swiper-item>
         </swiper>
         <view>
-        <view style="font-size: x-large; color:chocolate; margin-left: 35%;">课程热度</view>
-        <scroll-view scroll-y="true" style="height: 500rpx;">
+        <view class="tabs13">课程热度</view>
+        <scroll-view scroll-y="true" class="tabs131">
           <block wx:for="{{Hots}}" wx:key="url">
-            <view style="display: flex; height: 60rpx;">
-              <view style="width: 20%; font-size:x-large;">{{item.name}}</view>
+            <view class="tabs132">
+              <view class="tabs133">{{item.name}}</view>
               <view style="background-color: {{item.color}}; width: {{item.width}};"></view>
-              <image src="{{item.url}}" style="height: 60rpx;width: 60rpx;"></image>
+              <image src="{{item.url}}" class="tabs134"></image>
             </view>
           </block>
           </scroll-view>
@@ -80,31 +79,118 @@
 
     <!-- 第二个tab -->
     <block wx:if="{{tabIndex == 1}}">
-      <view style="height: 1000rpx; display: flex; width: 100%; border: 3rpx solid #faca82;">
-        <view style="width: 40%; height: 100%; border: 3rpx solid #faca82;"> 
-          <scroll-view scroll-y="true" style="height: 1000rpx;">
-            <block wx:for="{{Hots}}" wx:key="id">
-              <view style="width: 100%; height: 100rpx; display: flex; background-color: {{item.color}};border: 3rpx solid #faca82; "  >
-                <view style="margin: 25rpx;">{{item.name}}</view>
+      <view class="tabs21">
+        <view class="tabs211"><view class="tabs2111">管理项目类型</view></view>
+        <view class="tabs212">
+          <checkbox  checked="{{checks}}" bindtap="clickmes" class="tabs233"/>
+          <view class="tabs2111">全选</view>
+        </view>
+      </view>
+      <view class="tabs22">
+        <view class="tabs221"> 
+          <scroll-view scroll-y="true" class="tabs2211">
+            <block wx:for="{{clslist}}" wx:key="id">
+              <view style="width: 100%; height: 100rpx; display: flex; background-color: {{item.color}};border: 3rpx solid #faca82; "  data-id="{{item.id}}" bindtap="anxia">
+                <image src="{{item.url}}" class="tabs22111"></image>
+                <view class="tabs22112">{{item.name}}</view>
               </view>
             </block>
           </scroll-view>
         </view>
-        <view style="width: 70%; height: 100%; border: 3rpx solid #faca82;">
-          <scroll-view scroll-y="true" style="height: 1000rpx;">
-            <block wx:for="{{Hots}}" wx:key="id">
-              <view style="width: 100%; height: 100rpx; display: flex; border: 3rpx solid #faca82;" >
-                <view style="margin: 25rpx;">{{item.name}}</view>
+        <view class="tabs23">
+          <scroll-view scroll-y="true" class="tabs231">
+            <block wx:for="{{datelist}}" wx:key="id">
+              <view class="tabs232">
+                <checkbox  checked="{{item.checked}}" class="tabs233"/>
+                <view class="tabs234">{{item.name}}</view>
+                <button class="tabs235" hover-class="hover">查看</button>
               </view>
             </block>
           </scroll-view>
         </view>
       </view>
+      <view class="tabs21">
+        <button class="tabs235" hover-class="hover">清空</button>
+        <button class="tabs235" hover-class="hover">封禁</button>
+        <button class="tabs235" hover-class="hover">删除</button>
+      </view>
     </block>
-
     <!-- 第三个tab -->
     <block wx:if="{{tabIndex == 2}}">
-      <view>附近页面</view>
+      <view class="tab3card1"> 
+      <view style="display: flex; margin-left: 30rpx;">
+        <checkbox  checked="{{tab31checks}}"/>
+        <view >登录信息</view>
+      </view>
+        <view style="display: flex; width: 100%;margin-left: 5%;">
+            <view style="width: 30%;">姓名</view>
+            <view style="width: 70%;">登录时间</view>
+        </view>
+        <view style="width: 90%; height: 50rpx;margin-left: 5%;">
+          <scroll-view scroll-y="true" class="tab3card12">
+              <block wx:for="{{dllist}}"   wx:key="index"> 
+              <view style="display: flex; width: 100%;">
+                <view style="width: 30%;">{{item.name}}</view>
+                <view style="width: 70%;">{{item.times}}</view>
+              </view>
+              </block>
+          </scroll-view>
+        </view>
+      </view>
+      <view class="tab3card2"> 
+        <view style="display: flex; margin-left: 30rpx;">
+        <checkbox  checked="{{tab32checks}}"/>
+        <view >绑定信息</view>
+        </view>
+        <view style="display: flex; width: 100%;margin-left: 5%;">
+            <view style="width: 25%;">姓名</view>
+            <view style="width: 25%;">课程</view>
+            <view style="width: 50%;">绑定时间</view>
+        </view>
+        <view style="width: 90%; height: 50rpx;margin-left: 5%;">
+          <scroll-view scroll-y="true" class="tab3card12">
+              <block wx:for="{{bdlist}}"   wx:key="index"> 
+              <view style="display: flex; width: 100%;">
+                <view style="width: 25%;">{{item.name}}</view>
+                <view style="width: 25%;">{{item.class}}</view>
+                <view style="width: 50%;">{{item.times}}</view>
+              </view>
+              </block>
+          </scroll-view>
+        </view>
+      </view>
+      <view class="tab3card3"> 
+        <view style="display: flex; margin-left: 30rpx;">
+        <checkbox  checked="{{tab33checks}}"/>
+        <view >签到信息</view>
+      </view>
+        <view style="display: flex; width: 100%;margin-left: 5%;">
+            <view style="width: 25%;">姓名</view>
+            <view style="width: 25%;">课程</view>
+            <view style="width: 50%;">签到时间</view>
+        </view>
+        <view style="width: 90%; height: 50rpx;margin-left: 5%;">
+          <scroll-view scroll-y="true" class="tab3card12">
+              <block wx:for="{{qdlist}}"   wx:key="index"> 
+              <view style="display: flex; width: 100%;">
+                <view style="width: 25%;">{{item.name}}</view>
+                <view style="width: 25%;">{{item.class}}</view>
+                <view style="width: 50%;">{{item.times}}</view>
+              </view>
+              </block>
+          </scroll-view>
+        </view>
+      </view>
+      <view class="tab3card4">
+        <checkbox  checked="{{tab34checks}}" style="margin-left: 30rpx; margin-top: 30rpx;"/>
+        <view style="margin-left: 3rpx; margin-top: 30rpx;">全选</view>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+              删除时间段：{{array[index]}}
+          </view>
+        </picker>
+        <button class="t34btn" hover-class="hover">删除</button>
+      </view>
     </block>
   </view>
 </view>

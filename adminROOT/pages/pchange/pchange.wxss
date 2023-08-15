@@ -42,3 +42,173 @@ page{
    text-align: center;
    display: flex;
  }
+.tab1{
+  color: red; 
+  font-size: x-large; 
+  font-weight: 800;
+  font-family:cursive;
+}
+.tabs1{
+  height: 350rpx;
+}
+.tabs12{
+  display: flex;
+}
+.tabs121{
+  width: 50%;
+}
+.tabs122{
+  border-radius: 300rpx; 
+  height: 200rpx; 
+  width: 250rpx; 
+  margin: 20rpx;
+}
+.tabs123{
+  margin-left: 70rpx;
+}
+.tabs13{
+  font-size: x-large; 
+  color:chocolate; 
+  margin-left: 35%;
+}
+.tabs131{
+  height: 500rpx;
+}
+.tabs132{
+  display: flex; 
+  height: 60rpx;
+}
+.tabs133{
+  width: 20%; 
+  font-size:x-large;
+}
+.tabs134{
+  height: 60rpx;
+  width: 60rpx;
+}
+.tabs21{
+  width: 100%; 
+  height: 80rpx; 
+  border: 3rpx solid #faca82;
+  display: flex;
+}
+.tabs211{
+  width: 40%;
+}
+.tabs2111{
+  margin-top: 18rpx;
+  margin-left: 25rpx;
+}
+.tabs212{
+  width: 60%;
+  display: flex;
+}
+.tabs22{
+  height: 1000rpx; 
+  display: flex; 
+  width: 100%; 
+  border: 3rpx solid #faca82;
+}
+.tabs221{
+  width: 40%; 
+  height: 100%; 
+  border: 3rpx solid #faca82;
+}
+.tabs2211{
+  height: 1000rpx;
+}
+.tabs22111{
+  width: 80rpx; 
+  height: 80rpx;
+}
+.tabs22112{
+  margin-left: 1rpx; 
+  margin-top: 24rpx; 
+  font-size: 22px;
+}
+.tabs23{
+  width: 60%; 
+  height: 100%; 
+  border: 3rpx solid #faca82;
+}
+.tabs231{
+  height: 1000rpx;
+}
+.tabs232{
+  width: 100%; 
+  height: 100rpx; 
+  display: flex; 
+  border: 3rpx solid #faca82;
+}
+.tabs233{
+  margin-left: 5rpx; 
+  margin-top: 20rpx;
+}
+.tabs234{
+  margin: 25rpx;
+  font-size: 15pt;
+}
+.tabs235{
+  width: 30%; 
+  margin-right: 0%;
+  font-weight: 800;
+  color: rgb(182, 233, 248);
+  background-color: coral;
+}
+.hover{
+  background-color: rgb(249, 250, 244);
+}
+.tab3card1{
+  width: 90%;
+  margin-left: 5%;
+  height: 350rpx;
+  background: rgb(182, 247, 241);
+  border-radius: 10rpx;
+  box-shadow: 5px 5px 5px #d7e9e9;
+ }
+ .tab3card12{
+   height: 260rpx;
+   width: 100%;
+ }
+ .tab3card2{
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 20rpx;
+  height: 350rpx;
+  background: rgb(146, 202, 248);
+  border-radius: 10rpx;
+  box-shadow: 5px 5px 5px #d7e9e9;
+ }
+ .tab3card3{
+  width: 90%;
+  margin-left: 5%;
+  height: 350rpx;
+  margin-top: 20rpx;
+  background: rgb(228, 152, 252);
+  border-radius: 10rpx;
+  box-shadow: 5px 5px 5px #d7e9e9;
+ }
+ .tab3card4{
+  width: 90%;
+  margin-left: 5%;
+  height: 100rpx;
+  margin-top: 20rpx;
+  background: rgb(243, 105, 202);
+  border-radius: 10rpx;
+  box-shadow: 5px 5px 5px #d7e9e9;
+  display: flex;
+ }
+ .t34btn{
+  margin-right: 10rpx; 
+  width: 25%; 
+  height: 80rpx; 
+  margin-top: 10rpx; 
+  background-color:indigo;
+  color: khaki;
+ }
+ .picker{
+   margin-left: 25rpx;
+   margin-top: 15rpx;
+  padding: 17rpx;
+  border: 5rpx solid #e719d6;
+}
