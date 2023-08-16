@@ -33,7 +33,7 @@ Page({
       wx.showModal({
         title: '提示',
         content: '请先登录',
-        success:(res) {
+        success(res){
           if (res.confirm) {
             wx.reLaunch({
               url: "/pages/login/login"
@@ -55,18 +55,33 @@ Page({
         },
         success(res) {
           if (res.data.ret == 'True') {
-            wx.showToast({
-              title: '评论成功',
-              icon: 'success',
-              duration: 1500
-            });
-          } else {
+            wx.showModal({
+              title: '提示',
+              content: '评论成功，感谢您的建议，管理员会尽快处理',
+              success(res){
+                if (res.confirm) {
+                  that.back()
+                }
+              }
+            })
+          } else if(res.data.ret == 'F1') {
             wx.showModal({
               title: '提示',
               content: '评论太频繁，请歇一歇',
+              success(res){
+                if (res.confirm) {
+                  that.back()
+                }
+              }
             })
           }
-          that.back()
+          else{
+            wx.showModal({
+              title: '提示',
+              content: '请登录',
+            })
+          }
+          
         },
         fail(res) {
           wx.showToast({
