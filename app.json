@@ -53,8 +53,8 @@
     ]
   },
   "networkTimeout": {
-    "request": 10000,
-    "downloadFile": 10000
+    "request": 100000,
+    "downloadFile": 100000
   },
   "lazyCodeLoading": "requiredComponents"
 }

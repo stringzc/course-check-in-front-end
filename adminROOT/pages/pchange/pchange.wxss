@@ -79,8 +79,8 @@ page{
   height: 60rpx;
 }
 .tabs133{
-  width: 20%; 
-  font-size:x-large;
+  width: 30%; 
+  font-size:15px;
 }
 .tabs134{
   height: 60rpx;
@@ -93,14 +93,14 @@ page{
   display: flex;
 }
 .tabs211{
-  width: 40%;
+  width: 50%;
 }
 .tabs2111{
   margin-top: 18rpx;
   margin-left: 25rpx;
 }
 .tabs212{
-  width: 60%;
+  width: 50%;
   display: flex;
 }
 .tabs22{
@@ -110,7 +110,7 @@ page{
   border: 3rpx solid #faca82;
 }
 .tabs221{
-  width: 40%; 
+  width: 50%; 
   height: 100%; 
   border: 3rpx solid #faca82;
 }
@@ -127,7 +127,7 @@ page{
   font-size: 22px;
 }
 .tabs23{
-  width: 60%; 
+  width: 50%; 
   height: 100%; 
   border: 3rpx solid #faca82;
 }
@@ -149,7 +149,7 @@ page{
   font-size: 15pt;
 }
 .tabs235{
-  width: 30%; 
+  width: 40%; 
   margin-right: 0%;
   font-weight: 800;
   color: rgb(182, 233, 248);

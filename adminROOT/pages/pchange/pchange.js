@@ -7,37 +7,11 @@ Page({
   data: {
     tabs: ['小程序管理', '用户管理', '信息管理'],
     tabIndex: 0,
-    days:100,
-    users:50,
+    days:0,
+    users:0,
     Hots:[
-      {
-        id:"01",
-        name:"c+++++",
-        color:"red",
-        width:"50%",
-        url:"/static/hf1.png"
-      },
-      {
-        id:"10",
-        name:"c+++++",
-        color:"IndianRed",
-        width:"60%",
-        url:"/static/hf2.png"
-      }
     ],
     clslist:[
-      {
-        id:"01",
-        name:"c+++++",
-        color:"red",
-        url:"/static/hf2.png"
-      },
-      {
-        id:"10",
-        name:"c+++++",
-        color:"IndianRed",
-        url:"/static/hf2.png"
-      }
     ],
     datelist:[
       {
@@ -46,43 +20,12 @@ Page({
         checked:false
       }
     ],
-    dllist:[
+    lists:{
+      dllist:[
       {
         name:"zczczc",
         times:"2023.08.06 14:22"
-      },
-      {
-        name:"zczczc",
-        times:"2023.08.06 14:22"
-      },
-      {
-        name:"zczczc",
-        times:"2023.08.06 14:22"
-      },
-      {
-        name:"zczczc",
-        times:"2023.08.06 14:22"
-      },
-      {
-        name:"zczczc",
-        times:"2023.08.06 14:22"
-      },
-      {
-        name:"zczczc",
-        times:"2023.08.06 14:22"
-      },
-      {
-        name:"zczczc",
-        times:"2023.08.06 14:22"
-      },
-      {
-        name:"zczczc",
-        times:"2023.08.06 14:22"
-      },
-      {
-        name:"zczczc",
-        times:"2023.08.06 14:22"
-      },
+      }
     ],
     bdlist:[
     ],
@@ -91,7 +34,7 @@ Page({
        class:"c+++++",
        times:"2023.08.06 14:22"
     }
-    ],
+    ]},
     thisi:-1,
     thiscolor:"",
     checks:false,
@@ -100,8 +43,10 @@ Page({
     tab34checks:false,
     tab33checks:false,
     tab32checks:false,
-    tab31checks:false
-
+    tab31checks:false,
+    tabshow1:false,
+    tabshow2:false,
+    tabshow3:false
   },
   bindPickerChange: function (e) {
     this.setData({
@@ -128,36 +73,85 @@ Page({
     this.setData({
       tabIndex: id,
     })
-    
-    // if(id == 0)
-    // {
-
-    // }
-    // else if(id == 1)
-    // {
-    //   getApp().helper({
-    //     url: getApp().globalData.urlpath + '/getcls',
-    //     data: {
-    //       ID:"wx"
-    //     },
-    //     success(res) {
-    //       that.setData({
-    //         clslist:res.data.clslist
-    //       })
-    //     },
-    //     fail(res) {
-    //       wx.showToast({
-    //         title: '连接服务器失败',
-    //         image: '/static/error.png',
-    //         duration: 1500
-    //       });
-    //     }
-    //   });
-    // }
-    // else
-    // {
-
-    // }
+    if(id == 0)
+    {
+      var show1 = that.data.tabshow1
+      if(!show1)
+      {
+        getApp().helper({
+          url: getApp().globalData.urlpath + '/gethots',
+          data: {
+            ID:"wx"
+          },
+          success(res) {
+            that.setData({
+              days:res.data.days,
+              users:res.data.users,
+              Hots:res.data.Hots,
+              tabshow1:true
+            })
+          },
+          fail(res) {
+            wx.showToast({
+              title: '连接服务器失败',
+              image: '/static/error.png',
+              duration: 15000
+            });
+          }
+        });
+      }
+    }
+    else if(id == 1)
+    {
+      var show2 = this.data.tabshow2
+      if(!show2){
+        getApp().helper({
+          url: getApp().globalData.urlpath + '/getallcls',
+          data: {
+            ID:"wx"
+          },
+          success(res) {
+            that.setData({
+              clslist:res.data.clslist,
+              tabshow2:true
+            })
+          },
+          fail(res) {
+            wx.showToast({
+              title: '连接服务器失败',
+              image: '/static/error.png',
+              duration: 15000
+            });
+          }
+        });
+      }
+    }
+    else
+    {
+      let that = this
+      let show3 = this.data.tabshow3
+      if(!show3){
+      getApp().helper({
+        url: getApp().globalData.urlpath + '/logs',
+        data: {
+          ID: "wx"
+        },
+        success(res) {
+          that.setData({
+            lists:res.data.lists,
+            tabshow3:true
+          })
+        },
+        fail(res) {
+          wx.showToast({
+            title: '连接服务器失败',
+            image: '/static/error.png',
+            duration: 1500
+          });
+        }
+      });
+    }
+  }
   },
   anxia(e){
     var id = e.currentTarget.dataset.id
@@ -177,7 +171,7 @@ Page({
       if(lists[i].id == id)
       {
         var newcolor = lists[i].color
-        lists[i].color = "Gainsboro"
+        lists[i].color = "Navy"
         that.setData({
           clslist:lists,
           thisi:i,
@@ -186,7 +180,7 @@ Page({
       }
     }
     getApp().helper({
-      url: getApp().globalData.urlpath + '/getdate',
+      url: getApp().globalData.urlpath + '/getuserdate',
       data: {
         id: id,
         ID:"wx"
@@ -209,7 +203,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+  
   },
 
   /**

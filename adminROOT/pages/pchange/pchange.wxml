@@ -28,11 +28,11 @@
           <swiper-item >
             <view class="tabs12">
               <view class="tabs121">
-              <image src="/static/sjfx.png" class="tabs122" />
+              <image src="https://stringzc.top/static/sjfx.png" class="tabs122" />
               <view class="tabs123">数据分析</view>
               </view>
               <view class="tabs121">
-                <image src="/static/yjzx.png" class="tabs122"/>
+                <image src="https://stringzc.top/static/yjzx.png" class="tabs122"/>
                 <view class="tabs123">意见中心</view>
               </view>
             </view>  
@@ -40,11 +40,11 @@
           <swiper-item >
             <view class="tabs12">
               <view class="tabs121">
-              <image src="/static/huodon.png" class="tabs122"/>
+              <image src="https://stringzc.top/static/huodon.png" class="tabs122"/>
               <view class="tabs123">活动管理</view>
               </view>
               <view class="tabs121">
-                <image src="/static/class.png" class="tabs122"/>
+                <image src="https://stringzc.top/static/class.png" class="tabs122"/>
                 <view class="tabs123">课堂管理</view>
               </view>
             </view>
@@ -52,11 +52,11 @@
           <swiper-item >
             <view class="tabs12">
               <view class="tabs121">
-              <image src="/static/ronyu.png" class="tabs122"/>
+              <image src="https://stringzc.top/static/ronyu.png" class="tabs122"/>
               <view class="tabs123">证书管理</view>
               </view>
               <view class="tabs121">
-                <image src="/static/vedio.png" class="tabs122"/>
+                <image src="https://stringzc.top/static/vedio.png" class="tabs122"/>
                 <view class="tabs123">视频课管理</view>
               </view>
             </view>
@@ -65,11 +65,11 @@
         <view>
         <view class="tabs13">课程热度</view>
         <scroll-view scroll-y="true" class="tabs131">
-          <block wx:for="{{Hots}}" wx:key="url">
+          <block wx:for="{{Hots}}" wx:key="id">
             <view class="tabs132">
               <view class="tabs133">{{item.name}}</view>
               <view style="background-color: {{item.color}}; width: {{item.width}};"></view>
-              <image src="{{item.url}}" class="tabs134"></image>
+              <image src="https://stringzc.top/{{item.url}}" class="tabs134"></image>
             </view>
           </block>
           </scroll-view>
@@ -91,7 +91,7 @@
           <scroll-view scroll-y="true" class="tabs2211">
             <block wx:for="{{clslist}}" wx:key="id">
               <view style="width: 100%; height: 100rpx; display: flex; background-color: {{item.color}};border: 3rpx solid #faca82; "  data-id="{{item.id}}" bindtap="anxia">
-                <image src="{{item.url}}" class="tabs22111"></image>
+                <image src="https://stringzc.top/{{item.url}}" class="tabs22111"></image>
                 <view class="tabs22112">{{item.name}}</view>
               </view>
             </block>
@@ -128,7 +128,7 @@
         </view>
         <view style="width: 90%; height: 50rpx;margin-left: 5%;">
           <scroll-view scroll-y="true" class="tab3card12">
-              <block wx:for="{{dllist}}"   wx:key="index"> 
+              <block wx:for="{{lists.dllist}}"   wx:key="index"> 
               <view style="display: flex; width: 100%;">
                 <view style="width: 30%;">{{item.name}}</view>
                 <view style="width: 70%;">{{item.times}}</view>
@@ -143,16 +143,16 @@
         <view >绑定信息</view>
         </view>
         <view style="display: flex; width: 100%;margin-left: 5%;">
-            <view style="width: 25%;">姓名</view>
-            <view style="width: 25%;">课程</view>
+            <view style="width: 15%;">姓名</view>
+            <view style="width: 35%;">课程</view>
             <view style="width: 50%;">绑定时间</view>
         </view>
         <view style="width: 90%; height: 50rpx;margin-left: 5%;">
           <scroll-view scroll-y="true" class="tab3card12">
-              <block wx:for="{{bdlist}}"   wx:key="index"> 
+              <block wx:for="{{lists.bdlist}}"   wx:key="index"> 
               <view style="display: flex; width: 100%;">
-                <view style="width: 25%;">{{item.name}}</view>
-                <view style="width: 25%;">{{item.class}}</view>
+                <view style="width: 15%;">{{item.name}}</view>
+                <view style="width: 35%;">{{item.class}}</view>
                 <view style="width: 50%;">{{item.times}}</view>
               </view>
               </block>
@@ -165,16 +165,16 @@
         <view >签到信息</view>
       </view>
         <view style="display: flex; width: 100%;margin-left: 5%;">
-            <view style="width: 25%;">姓名</view>
-            <view style="width: 25%;">课程</view>
+            <view style="width: 15%;">姓名</view>
+            <view style="width: 35%;">课程</view>
             <view style="width: 50%;">签到时间</view>
         </view>
         <view style="width: 90%; height: 50rpx;margin-left: 5%;">
           <scroll-view scroll-y="true" class="tab3card12">
-              <block wx:for="{{qdlist}}"   wx:key="index"> 
+              <block wx:for="{{lists.qdlist}}"   wx:key="index"> 
               <view style="display: flex; width: 100%;">
-                <view style="width: 25%;">{{item.name}}</view>
-                <view style="width: 25%;">{{item.class}}</view>
+                <view style="width: 15%;">{{item.name}}</view>
+                <view style="width: 35%;">{{item.class}}</view>
                 <view style="width: 50%;">{{item.times}}</view>
               </view>
               </block>
